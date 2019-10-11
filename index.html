@@ -25,8 +25,8 @@ var angle = 0;
 
 window.addEventListener('deviceorientation', function(e) {
     console.log( e.webkitCompassHeading );
-    document.getElementById("data").innerHTML=e.webkitCompassHeading;
     var angle = e.webkitCompassHeading;
+    document.getElementById("data").innerHTML=angle
 }, false);
 
 </script>
