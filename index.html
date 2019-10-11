@@ -20,7 +20,11 @@
 
 var angle = 0;
 
-    $('#image').css('transform','rotate(' + angle + 'deg)');
+
+    setInterval(function(){
+        $('#image').css('transform','rotate(' + angle + 'deg)');
+     }, 1);
+
 
 
 window.addEventListener('deviceorientation', function(e) {
