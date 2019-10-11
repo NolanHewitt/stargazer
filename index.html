@@ -19,18 +19,14 @@
 <script>
 
 var angle = 0;
-$('#button').on('click', function() {
-    angle += 5;
+
     $('#image').css('transform','rotate(' + angle + 'deg)');
-});
-$('#button2').on('click', function() {
-    angle += -5;
-    $('#image').css('transform','rotate(' + angle + 'deg)');
-});
+
 
 window.addEventListener('deviceorientation', function(e) {
     console.log( e.webkitCompassHeading );
     document.getElementById("data").innerHTML=e.webkitCompassHeading;
+    var angle = e.webkitCompassHeading;
 }, false);
 
 </script>
