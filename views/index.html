@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <img id="image" src="https://www.clipartwiki.com/clipimg/detail/58-580429_how-to-draw-a-compass-circle.png">
+    <button id="button">Rotate</button>
+    <button id="button2">Rotate Otherway</button>
+
+<br></br>
+
+<div id="data"></div>
+    <div></div>
+</head>
+<body>
+    
+</body>
+
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script>
+
+var angle = 0;
+$('#button').on('click', function() {
+    angle += 5;
+    $('#image').css('transform','rotate(' + angle + 'deg)');
+});
+$('#button2').on('click', function() {
+    angle += -5;
+    $('#image').css('transform','rotate(' + angle + 'deg)');
+});
+
+window.addEventListener('deviceorientation', function(e) {
+    console.log( e.webkitCompassHeading );
+    document.getElementById("data").innerHTML=e.webkitCompassHeading;
+}, false);
+
+</script>
+
+</html>
