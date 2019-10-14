@@ -2,20 +2,45 @@
 <html lang="en">
 <head>
     <title>Document</title>
+<style>
 
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+  z-index: -1;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+</style>
 
 </head>
 
 
 <body>
+
+<div id="bg">
+    <img src="../stargazer/images/background.jpg">
+</div>
+
         <div style="display: block; text-align: center;">
     <img style="height: 150%; width: 150%; margin-left: -25%; margin-top: -70%;" id="image" src="../stargazer/images/circle-cropped.png">
-    </div>
+    
+    <div style="text-align: center; font-size: 200%; color: tomato;" id="data"></div>
+
+</div>
 
 <br></br>
-
-<div style="text-align: center; font-size: 200%;" id="data"></div>
-    <div></div>
     
 </body>
 
