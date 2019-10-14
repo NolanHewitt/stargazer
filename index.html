@@ -24,8 +24,8 @@
 }
 .round-button {
   width:15%;
-  float: right;
-  margin-right: 5%;
+  margin-left: auto; 
+  margin-right: 0;
 }
 .round-button-circle {
   width: 100%;
@@ -60,6 +60,12 @@
 #commentX:hover {
     color: black;
     cursor: pointer;
+}
+.placeholderComment{
+    background-color: white;
+    width: 30%;
+    margin: auto;
+    padding: 1%;
 }
 </style>
 
@@ -97,7 +103,24 @@
 </div>
 
 <div id="roundbtn" class="round-button"><div class="round-button-circle"><a onclick="comment();" class="round-button">🗭</a></div></div>
-    
+  
+<br></br>
+
+<div class="placeholderComment">
+    I saw a Plane.
+    <br></br>
+This is a placeholder comment example.
+</div>
+
+<br></br>
+
+<div class="placeholderComment">
+        I saw a Shooting Star.
+        <br></br>
+    This is another placeholder comment example.
+    </div>
+
+
 </body>
 
 <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
