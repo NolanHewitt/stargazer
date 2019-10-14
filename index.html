@@ -2,16 +2,20 @@
 <html lang="en">
 <head>
     <title>Document</title>
-    <img id="image" src="../stargazer/images/compass.png">
-    <button id="button">Rotate</button>
-    <button id="button2">Rotate Otherway</button>
+
+
+</head>
+
+
+<body>
+        <div style="display: block; text-align: center; margin-top: 40%;">
+    <img style="height: 80%; width: 80%; align-content: center;" id="image" src="../stargazer/images/circle-cropped.png">
+    </div>
 
 <br></br>
 
-<div id="data"></div>
+<div style="text-align: center; font-size: 200%;" id="data"></div>
     <div></div>
-</head>
-<body>
     
 </body>
 
@@ -23,14 +27,14 @@ var angle = 0;
 
     setInterval(function(){
         $('#image').css('transform','rotate(' + angle + 'deg)');
-     }, 1);
+     }, 15);
 
 
 
 window.addEventListener('deviceorientation', function(e) {
     console.log( e.webkitCompassHeading );
     angle = e.webkitCompassHeading;
-    document.getElementById("data").innerHTML=angle
+    document.getElementById("data").innerHTML=Math.floor(angle);
 }, false);
 
 </script>
