@@ -2,7 +2,7 @@
 
 [View the Star Gazer App!](https://nolanhewitt.github.io/stargazer/)
 <br>
-*This app is best viewed on a mobile device using chrome
+*This app is best viewed on a iphone using chrome
 
 Join our team as we go on an adventure building a Social Astronomy App experience!
 
