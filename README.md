@@ -5,7 +5,9 @@
 *This app is best viewed on a mobile device using chrome
 
 Join our team as we go on an adventure building a Social Astronomy App experience!
-![Star Gazer App](./images/stargazer.PNG)
+
+[Star Gazer App](./images/stargazer.PNG)
+
 
 ### MVP
 1. Rotating image of the sky at a specific date and time (scrape using "In the sky" api link)
