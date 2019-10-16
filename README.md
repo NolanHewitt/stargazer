@@ -1,10 +1,10 @@
-### Star Gazer App
+# Star Gazer App
 
 [View the stars](https://nolanhewitt.github.io/stargazer/)
 
-## Join our team as we go on an adventure building a Social Astronomy App experience!
+Join our team as we go on an adventure building a Social Astronomy App experience!
 
-# MVP
+### MVP
 1. Rotating image of the sky at a specific date and time (scrape using "In the sky" api link)
 2. Rotating image of the sky is based off of the users phone magnetic north to base to create the users "line of sight" on the app
 3. User Authentication/Login
