@@ -1,8 +1,13 @@
 # Star Gazer App
 
-[View the stars](https://nolanhewitt.github.io/stargazer/)
+[View the Star Gazer App!](https://nolanhewitt.github.io/stargazer/)
+<br>
+*This app is best viewed on a mobile device using chrome
 
 Join our team as we go on an adventure building a Social Astronomy App experience!
+
+[Star Gazer App](./images/stargazer.PNG)
+
 
 ### MVP
 1. Rotating image of the sky at a specific date and time (scrape using "In the sky" api link)
@@ -11,4 +16,3 @@ Join our team as we go on an adventure building a Social Astronomy App experienc
 4. Users can leave comments and the main page will show the most recent comments of all users
 5. Users can also view a history of their own comments
 6. The comments will use the IBM Watson Tone Analyzer Api to determine the "tone" of the comment and then auto-populate an emoji for each comment.
-
