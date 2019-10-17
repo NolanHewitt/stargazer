@@ -10,7 +10,14 @@ export default function Dashboard() {
 
   const [myGames, setMyGames] = useState([]);
 
-  $.getJSON("http://gd.geobytes.com/GetCityDetails?callback=?", function(data) {
+  let city;
+  let state;
+  let country;
+  let continent;
+  let latitude;
+  let longitude;
+
+  $.getJSON("http://gd.geobytes.com/GetCityDetails?callback=?", function (data) {
     console.log("Everything: " + data.geobytesfqcn);
     console.log("City: " + data.geobytescity);
     console.log("State: " + data.geobytesregion);
@@ -19,6 +26,19 @@ export default function Dashboard() {
     console.log("Currency Code: " + data.geobytescurrencycode);
     console.log("Latitude: " + data.geobyteslatitude);
     console.log("Longitude: " + data.geobyteslongitude);
+    city = data.geobytescity;
+    state = data.geobytesregion;
+    country = data.geobytescountry;
+    latitude = data.geobyteslatitude;
+    longitude = data.geobyteslongitude;
+    
+  }).then(function() {
+    console.log(city + "Test");
+    document.getElementById("location").innerHTML = "You are at " + city + ", " + state + ".";
+    document.getElementById("coordinates").innerHTML = latitude + " " + longitude;
+
+    let url = "https://in-the-sky.org/skymap2.php?no_cookie=1&latitude=" +latitude+ "&longitude=" +longitude+ "&timezone=-5.00&year=2019&month=10&day=16&hour=10&min=28&PLlimitmag=0&zoom=160&ra=10.91694&dec=44.97997"
+    document.getElementById("URL").innerHTML = url;
   });
 
   return (
@@ -32,6 +52,11 @@ export default function Dashboard() {
               You are logged into a full-stack{" "}
               <span style={{ fontFamily: "monospace" }}>MERN</span> app 👏
             </p>
+
+            <p id="location"></p>
+            <p id="coordinates"></p>
+            <p id="URL"></p>
+
           </h4>
           <button
             style={{
