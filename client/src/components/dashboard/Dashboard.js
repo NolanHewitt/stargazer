@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import {Link} from "react-router-dom";
+import $ from 'jquery';
 
 import { AuthContext } from "../../auth/auth";
 
@@ -9,15 +10,15 @@ export default function Dashboard() {
 
   const [myGames, setMyGames] = useState([]);
 
-  useEffect(() => {
-    setTimeout(() => {
-      fetch(`/api/v1/games/my-games/${user.id}`)
-        .then(res => res.json())
-        .then(res => {
-          console.log(res);
-          setMyGames(res.games);
-        });
-    }, 1000);
+  $.getJSON("http://gd.geobytes.com/GetCityDetails?callback=?", function(data) {
+    console.log("Everything: " + data.geobytesfqcn);
+    console.log("City: " + data.geobytescity);
+    console.log("State: " + data.geobytesregion);
+    console.log("Country: " + data.geobytescountry);
+    console.log("Continent: " + data.geobytesmapreference);
+    console.log("Currency Code: " + data.geobytescurrencycode);
+    console.log("Latitude: " + data.geobyteslatitude);
+    console.log("Longitude: " + data.geobyteslongitude);
   });
 
   return (
