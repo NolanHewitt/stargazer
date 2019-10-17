@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 
+import "./Login.css";
+
 import { AuthContext } from "../../auth/auth";
 
 export default function Login({ history }) {
