@@ -2,6 +2,8 @@ import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import classnames from "classnames";
 
+import "./Register.css";
+
 import { AuthContext } from "../../auth/auth";
 
 export default function Register({ history }) {
