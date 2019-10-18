@@ -252,7 +252,7 @@ myFunction3();
 
         document.getElementById("moon").style.marginLeft = percentFinalM+"100%";
         document.getElementById("sun").style.marginLeft = percentFinal+"100%";
-        }, 30000);
+        }, 45000);
   };
 
   myFunction();
