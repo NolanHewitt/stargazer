@@ -1,6 +1,5 @@
 import React, { useContext,} from "react";
 import PropTypes from "prop-types";
-import $ from 'jquery';
 import Locator from '../locator/locator'
 
 import Skywatch from "../skywheel/watch"
@@ -14,6 +13,9 @@ export default function Dashboard() {
 
   return (
     <>
+
+    <Skywatch/>
+
     <Locator/>
 
     <div style={{ height: "75vh" }} className="container valign-wrapper">
@@ -50,8 +52,6 @@ export default function Dashboard() {
 
 
         </div>
-
-<Skywatch/>
 
       </div>
     </div>
