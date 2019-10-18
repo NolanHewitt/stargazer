@@ -15,6 +15,7 @@ export default function Dashboard() {
   return (
     <>
     <Locator/>
+    <Skywatch/>
 
     <div style={{ height: "75vh" }} className="container valign-wrapper">
       <div className="row">
@@ -50,8 +51,6 @@ export default function Dashboard() {
 
 
         </div>
-
-<Skywatch/>
 
       </div>
     </div>
