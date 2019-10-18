@@ -1,29 +1,27 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext,} from "react";
 import PropTypes from "prop-types";
+<<<<<<< HEAD
 import {Link} from "react-router-dom";
 import Comment from '../Comment/Comment'
 
+=======
+import $ from 'jquery';
+import Locator from '../locator/locator'
+
+import Skywatch from "../skywheel/watch"
+>>>>>>> e8589e66644a3e3e038a52c2f7e86525b2ae3bfd
 
 import { AuthContext } from "../../auth/auth";
 
 export default function Dashboard() {
   const { user, logoutUser } = useContext(AuthContext);
 
-  const [myGames, setMyGames] = useState([]);
 
-  useEffect(() => {
-    setTimeout(() => {
-      fetch(`/api/v1/games/my-games/${user.id}`)
-        .then(res => res.json())
-        .then(res => {
-          console.log(res);
-          setMyGames(res.games);
-        });
-    }, 1000);
-  });
 
   return (
     <>
+    <Locator/>
+    
     <div style={{ height: "75vh" }} className="container valign-wrapper">
       <div className="row">
         <div className="landing-copy col s12 center-align">
@@ -33,6 +31,12 @@ export default function Dashboard() {
               You are logged into a full-stack{" "}
               <span style={{ fontFamily: "monospace" }}>MERN</span> app 👏
             </p>
+
+            <p id="location"></p>
+            <p id="coordinates"></p>
+            <p id="URL"></p>
+
+
           </h4>
           <button
             style={{
@@ -49,9 +53,15 @@ export default function Dashboard() {
           >
             Logout
           </button>
+
+
         </div>
+
+<Skywatch/>
+
       </div>
     </div>
+<<<<<<< HEAD
     <Comment
     />
       <div>
@@ -96,6 +106,8 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
+=======
+>>>>>>> e8589e66644a3e3e038a52c2f7e86525b2ae3bfd
     </>
   );
 }

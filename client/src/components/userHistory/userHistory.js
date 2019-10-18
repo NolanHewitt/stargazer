@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import "./Game.css";
+import "./userHistory.css";
 
 function setCharAt(str,index,chr) {
   if(index > str.length-1) return str;
