@@ -8,7 +8,7 @@ function Comment () {
           <select name="sights">
             <option className="comment-options" value="nothing" >Nothing</option>
             <option value="shootingStar">Shooting Star</option>
-            <option value="sattelite">Sattelite</option>
+            <option value="sattelite">Satellite</option>
             <option value="plane">Plane</option>
             <option value="ufo">UFO</option>
             <option value="other">Other</option>
