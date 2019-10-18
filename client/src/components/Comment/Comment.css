@@ -1,0 +1,28 @@
+select {
+    display: block;
+    color: goldenrod;
+    background: black;
+}
+.comments {
+    width: 40%;
+    padding: 1%;
+    border: 10px solid black;
+    background: rgb(9, 9, 95);
+    color: goldenrod;
+    text-align: center;
+    margin: 0 auto;
+    
+}
+#comment-box {
+    height: 100px;
+    color: goldenrod;
+}
+option {
+    color: goldenrod;
+}
+button {
+    background: black;
+    border-radius: 10px;
+    font-size: 25px;
+    color: goldenrod;
+}
