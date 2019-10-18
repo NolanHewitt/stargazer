@@ -1,15 +1,12 @@
 import React, { useContext,} from "react";
 import PropTypes from "prop-types";
-<<<<<<< HEAD
 import {Link} from "react-router-dom";
 import Comment from '../Comment/Comment'
 
-=======
 import $ from 'jquery';
 import Locator from '../locator/locator'
 
 import Skywatch from "../skywheel/watch"
->>>>>>> e8589e66644a3e3e038a52c2f7e86525b2ae3bfd
 
 import { AuthContext } from "../../auth/auth";
 
@@ -61,7 +58,6 @@ export default function Dashboard() {
 
       </div>
     </div>
-<<<<<<< HEAD
     <Comment
     />
       <div>
@@ -106,8 +102,6 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-=======
->>>>>>> e8589e66644a3e3e038a52c2f7e86525b2ae3bfd
     </>
   );
 }
