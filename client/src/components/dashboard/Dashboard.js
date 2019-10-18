@@ -4,9 +4,8 @@ import {Link} from "react-router-dom";
 import Comment from '../Comment/Comment'
 
 import $ from 'jquery';
-import Locator from '../locator/locator'
-
-import Skywatch from "../skywheel/watch"
+import axios from 'axios';
+import cheerio from 'cheerio';
 
 import { AuthContext } from "../../auth/auth";
 
@@ -14,11 +13,54 @@ export default function Dashboard() {
   const { user, logoutUser } = useContext(AuthContext);
 
 
+  let city;
+  let state;
+
+  let latitude;
+  let longitude;
+
+  $.getJSON("http://gd.geobytes.com/GetCityDetails?callback=?", function (data) {
+    console.log("Everything: " + data.geobytesfqcn);
+    console.log("City: " + data.geobytescity);
+    console.log("State: " + data.geobytesregion);
+    console.log("Country: " + data.geobytescountry);
+    console.log("Continent: " + data.geobytesmapreference);
+    console.log("Currency Code: " + data.geobytescurrencycode);
+    console.log("Latitude: " + data.geobyteslatitude);
+    console.log("Longitude: " + data.geobyteslongitude);
+    city = data.geobytescity;
+    state = data.geobytesregion;
+    latitude = data.geobyteslatitude;
+    longitude = data.geobyteslongitude;
+    
+  }).then(function() {
+    console.log(city + "Test");
+    document.getElementById("location").innerHTML = "You are at " + city + ", " + state + ".";
+    document.getElementById("coordinates").innerHTML = latitude + " " + longitude;
+
+    let url = "https://in-the-sky.org/skymap2.php?no_cookie=1&latitude=" +latitude+ "&longitude=" +longitude+ "&timezone=-5.00&year=2019&month=10&day=16&hour=10&min=28&PLlimitmag=0&zoom=160&ra=10.91694&dec=44.97997"
+    console.log("Url: "+url);
+
+
+    axios.get(url).then(function(response) {
+    let $ = cheerio.load(response.data);
+    console.log($);
+
+    // Grab image
+    $("div.PLhost.position_relative").each(function(i, element) {
+      // Save an empty result object
+     let result = {};
+      // Save the text and link of each a from each h3
+      result.link = $(this)
+        .children("a")
+        .attr("href");
+    });
+  });
+
+  });
 
   return (
     <>
-    <Locator/>
-    
     <div style={{ height: "75vh" }} className="container valign-wrapper">
       <div className="row">
         <div className="landing-copy col s12 center-align">
@@ -32,7 +74,6 @@ export default function Dashboard() {
             <p id="location"></p>
             <p id="coordinates"></p>
             <p id="URL"></p>
-
 
           </h4>
           <button
@@ -50,12 +91,7 @@ export default function Dashboard() {
           >
             Logout
           </button>
-
-
         </div>
-
-<Skywatch/>
-
       </div>
     </div>
     <Comment
