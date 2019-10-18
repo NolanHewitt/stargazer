@@ -4,6 +4,7 @@ import Locator from '../locator/locator'
 import Skywatch from "../skywheel/watch"
 import { History, HistoryItem } from "../userHistory";
 import { AuthContext } from "../../auth/auth";
+import Comment from "../comment";
 
 export default function Dashboard() {
   const { user, logoutUser } = useContext(AuthContext);
@@ -49,6 +50,7 @@ export default function Dashboard() {
 
 
         </div>
+        <Comment></Comment>
         <History>
 <HistoryItem>
   {/* Comment History to go here at some point! */}
