@@ -1,0 +1,6 @@
+body {
+    background: url("./components/images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Star Jedi', arial;
+}
