@@ -1,6 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import {Link} from "react-router-dom";
+import Comment from '../Comment/Comment'
+
 
 import { AuthContext } from "../../auth/auth";
 
@@ -50,6 +52,8 @@ export default function Dashboard() {
         </div>
       </div>
     </div>
+    <Comment
+    />
       <div>
         <button
           style={{
