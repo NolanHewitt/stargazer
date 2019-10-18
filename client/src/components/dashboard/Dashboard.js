@@ -13,9 +13,6 @@ export default function Dashboard() {
 
   return (
     <>
-
-    <Skywatch/>
-
     <Locator/>
     <Skywatch/>
 
