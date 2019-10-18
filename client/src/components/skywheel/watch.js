@@ -1,7 +1,27 @@
-import React, { Component } from "react";
+import React from "react";
 import $ from 'jquery';
+import moment from 'moment';
+import sun from './images/sun.png'
+import './images.css'
 
 export default function() {
+
+  let minstoday;
+
+  function myFunction() {
+    setInterval(function(){
+
+  var CurrentDate = moment().format('HH:mm');
+    console.log(CurrentDate);
+
+    let dateSplit;
+    dateSplit = CurrentDate.split(':');
+    let dateHtom;
+    dateHtom = dateSplit[0] * 60
+    minstoday = dateHtom + parseInt(dateSplit[1]);
+    console.log(minstoday + " mins have passed today.");
+
+    //-----------------------------------------------------------------
 
   let sunrise;
   let sunset;
@@ -17,24 +37,35 @@ export default function() {
     sunr = sunrise.split(':');
     
   }).then(function() {
-    console.log(suns);
-    console.log(sunr);
-
     let sunrHtom = parseInt(sunr[0] * 60)
     let sunrMin = parseInt(sunr[1])
     let sunriseT = sunrHtom + sunrMin;
-    console.log("The sun rises at " + sunriseT + " mins after midnight.")
+    console.log("The sun rises at " + sunriseT + " mins after midnight.");
 
     let sunsHtom = parseInt(suns[0] * 60)
     let sunsMin = parseInt(suns[1])
     let sunsetT = sunsHtom + sunsMin;
-    console.log("The sun sets at " + sunsetT + " mins after midnight.")
+    console.log("The sun sets at " + sunsetT + " mins after midnight.");
 
-  })
+    let suntime = sunsetT - sunriseT;
+    let moontime = 1440 - suntime;
+    console.log("The sun will be out for " + suntime + " mins today");
+    console.log("It will be dark for " + moontime + " mins today.");
 
+    let time = minstoday - sunriseT;
+console.log(time + " test");
+  });
+
+
+
+        document.getElementById("sun").style.marginLeft = "50px";
+        }, 1000);
+  };
+
+  myFunction();
 
   return (
         //
-        <div>Placeholder</div>  
+        <img alt="sun" id="sun" src={sun} /> 
   );
 }
