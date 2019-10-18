@@ -15,7 +15,7 @@ export default function Dashboard() {
   return (
     <>
     <Locator/>
-    
+
     <div style={{ height: "75vh" }} className="container valign-wrapper">
       <div className="row">
         <div className="landing-copy col s12 center-align">

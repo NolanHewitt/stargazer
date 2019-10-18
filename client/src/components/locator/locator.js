@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import $ from 'jquery';
+import './locator.css';
+import sun from './images/sun.png';
+
 
 export default function() {
 
@@ -21,7 +24,7 @@ export default function() {
 
 
   return (
-        <div></div>
+        <img id="sun" src={sun} />
         
   );
 }
