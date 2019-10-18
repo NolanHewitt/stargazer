@@ -24,8 +24,4 @@ export function HistoryItem({ children }) {
   return <li className="list-group-item">{children}</li>;
 }
 
-// Component to be added to dashboard page! VVV
-
-<History>
-
-</History>
+// Sandbox for component to be added to dashboard page! VVV

@@ -2,7 +2,7 @@ import React, { useContext,} from "react";
 import PropTypes from "prop-types";
 import Locator from '../locator/locator'
 import Skywatch from "../skywheel/watch"
-
+import { History, HistoryItem } from "../userHistory";
 import { AuthContext } from "../../auth/auth";
 
 export default function Dashboard() {
@@ -49,7 +49,11 @@ export default function Dashboard() {
 
 
         </div>
-
+        <History>
+<HistoryItem>
+  {/* Comment History to go here at some point! */}
+</HistoryItem>
+</History>
       </div>
     </div>
     </>
