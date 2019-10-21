@@ -28,6 +28,8 @@ module.exports = {
     create: function (req, res) {
         console.log("creating a comment");
         console.log(req.body);
+        console.log(req.user);
+        
         
         
         db.Comment
