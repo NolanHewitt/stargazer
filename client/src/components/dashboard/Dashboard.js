@@ -1,11 +1,13 @@
 import React, { useContext,} from "react";
 import PropTypes from "prop-types";
-import Locator from '../locator/locator'
+// import Locator from '../locator/locator'
 import Skywatch from "../skywheel/watch"
 import { History, HistoryItem } from "../userHistory";
 import { AuthContext } from "../../auth/auth";
 import Comment from "../Comment/index";
 import Compass from "../compass/compass"
+import './dashboard.css'
+import background from "../images/background.jpg"
 
 export default function Dashboard() {
   const { user, logoutUser } = useContext(AuthContext);
@@ -14,37 +16,33 @@ export default function Dashboard() {
 
   return (
     <>
-    <Locator/>
+    <div id ="bg">
+      <img src={background}>
+      </img>
+    </div>
+    {/* <Locator/> */}
     <Skywatch/>
 
-    <div style={{ height: "75vh" }} className="container valign-wrapper">
+    <div style={{ height: "75vh", color: "white" }} className="container valign-wrapper">
       <div className="row">
         <div className="landing-copy col s12 center-align">
           <h4>
             <b>Hey there,</b> {user.name.split(" ")[0]}
-            <p className="flow-text grey-text text-darken-1">
-              You are logged into a full-stack{" "}
-              <span style={{ fontFamily: "monospace" }}>MERN</span> app 👏
+            <p style={{ color: "white" }} className="flow-text text-darken-1">
+              You are logged in
             </p>
-
-            <p id="location"></p>
-            <p id="coordinates"></p>
-            <p id="URL"></p>
 
 
           </h4>
           <button
             style={{
-              width: "150px",
-              borderRadius: "3px",
-              letterSpacing: "1.5px",
-              marginTop: "1rem"
+              width: "85px"
             }}
             onClick={e => {
               e.preventDefault();
               logoutUser();
             }}
-            className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+            className="btn waves-effect waves-light hoverable blue accent-3"
           >
             Logout
           </button>
