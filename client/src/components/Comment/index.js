@@ -15,7 +15,7 @@ function Comment () {
           </select>
           <br/>
           <textarea id= "comment-box" rows= "4">Comment</textarea>
-          <button>Post</button>
+          <button id="commentBtn">Post</button>
         </form>
       </div>
     );
