@@ -7,6 +7,7 @@ import { AuthContext } from "../../auth/auth";
 import Comment from "../Comment/index";
 import Compass from "../compass/compass";
 import './dashboard.css';
+import background from "../images/background.jpg";
 
 export default function Dashboard() {
   const { user, logoutUser } = useContext(AuthContext);
@@ -17,6 +18,10 @@ export default function Dashboard() {
     <>
       {/* <Locator/> */}
       < Skywatch />
+      <div id="bg">
+        <img src={background} alt="starry night sky">
+        </img>
+      </div>
 
       <div style={{ height: "75vh", color: "white" }} className="container valign-wrapper">
         <div className="row">
