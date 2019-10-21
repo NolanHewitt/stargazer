@@ -54,44 +54,38 @@ export default function getWeather() {
 
 
     return (
-        <>            <button
+        <>           
+         <button
             style={{
-                width: "150px",
+                width: "100px",
                 borderRadius: "3px",
-                letterSpacing: "1.5px",
-                marginTop: "1rem"
+                position:  "absolute",
+                marginTop: "145%",
+                marginLeft: "3%"
+
             }}
             onClick={e => {
                 e.preventDefault();
                 getWeather();
                 document.getElementById("weather-container").style.display = "block";
-
-
-
             }}
-            className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-        >
-            Weather
-    </button>
+            className="emoji btn btn-large waves-effect waves-light hoverable blue accent-3">
+            ⛈️
+         </button>
+
             <div class="containerW" id="weather-container">
-                <div class="weather-box">
-                    <div class="row1">
+                    <div id="rowW" class="row2">
                         <h2 class="weather-location">Location</h2>
-                    </div>
-                    <div class="row2">
-                        <h1 class="degree-section">Temperature: °F</h1>
+                        <h3 class="degree-section">Temperature: °F</h3>
                         <h3 class="degree-high">Max. Temperature: °F</h3>
                         <h3 class="degree-low">Min. Temperature: °F</h3>
+                        {/* <img class="weather-image" src="" alt="" width="128" height="128" /> */}
+                    <h3 class="weather-description"></h3>
 
-                        <span class="temp-type">°F</span>
-                    </div>
-                    <img class="weather-image" src="" alt="" width="128" height="128" />
-                    <h2 class="weather-description">Description: </h2>
-                </div>  
-                <button
+         <button
             style={{
-                width: "150px",
-                borderRadius: "3px",
+                width: "105px",
+                borderRadius: "4px",
                 letterSpacing: "1.5px",
                 marginTop: "1rem"
             }}
@@ -100,10 +94,15 @@ export default function getWeather() {
                 getWeather();
                 document.getElementById("weather-container").style.display = "none";
             }}
-            className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-        >
-            Close
-    </button>              
+            className="btn btn-large waves-effect waves-light hoverable blue accent-3">
+                Close
+         </button>    
+
+
+                    </div>
+                    
+            
+                         
             </div>
 
         </>

@@ -24,7 +24,7 @@ function Comment() {
   };
 
     return (
-      <div className = "comments">
+      <div id="commentsa" className = "comments">
         <form> What did you see?
           <select name="sights">
             <option className="comment-options" value="nothing" >Nothing</option>
