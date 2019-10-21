@@ -7,13 +7,11 @@ const passport = require("passport");
 
 // Load Game model
 const Comments = require("../../models/Comment");
+const controller = require("../../controllers/commentControl")
 
-router.post("/", (req, res) => {
-  console.log(req.body);
-  Comments.create({ x: req.body.x }).then(comment => {
-    res.json(comment);
-  });
-});
+
+router.get("/recent", controller.mostRecent);
+router.post("/", controller.create);
 
 router.get("/my-comments/:userId", (req, res) => {
   console.log("happy => ", req.params.userId);

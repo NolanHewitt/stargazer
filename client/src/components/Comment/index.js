@@ -1,7 +1,28 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+
 // import "../Comment/Comment.css"
 
-function Comment () {
+function Comment() {
+
+  const [comment, setComment] = useState("");
+
+
+  function postHandler(event) {
+    event.preventDefault();
+    console.log("posted a comment!")
+    fetch("/api/comments/", {
+        method: "POST",
+        body: JSON.stringify({
+          text: comment
+        }),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }
+
+    )
+  };
+
     return (
       <div className = "comments">
         <form> What did you see?
@@ -14,8 +35,9 @@ function Comment () {
             <option value="other">Other</option>
           </select>
           <br/>
-          <textarea style={{ color:"white" }} id= "comment-box" rows= "4">Comment</textarea>
-          <button id="commentBtn">Post</button>
+          <p>{comment}</p>
+          <textarea id= "comment-box" value = {comment} onChange = {event => setComment(event.target.value)} rows= "4">Comment</textarea>
+          <button id="commentBtn" onClick = {postHandler}>Post</button>
         </form>
       </div>
     );
