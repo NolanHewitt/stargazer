@@ -7,7 +7,10 @@ const Schema = mongoose.Schema;
 // Create Schema
 const commentSchema = new Schema({
 
-  text: String,
+  text: {
+    type: String,
+    required: true
+  },
 
   timestamp: {
     type: Date,

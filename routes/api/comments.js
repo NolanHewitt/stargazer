@@ -9,12 +9,6 @@ const passport = require("passport");
 const Comments = require("../../models/Comment");
 const controller = require("../../controllers/commentControl")
 
-router.post("/", (req, res) => {
-  console.log(req.body);
-  Comments.create({ x: req.body.x }).then(comment => {
-    res.json(comment);
-  });
-});
 
 router.get("/recent", controller.mostRecent);
 router.post("/", controller.create);

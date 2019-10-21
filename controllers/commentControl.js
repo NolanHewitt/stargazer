@@ -25,8 +25,6 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     create: function (req, res) {
-        console.log("we're in the controller!");
-        console.log(req.body);
         db.Comment
             .create(req.body)
             .then(dbModel => res.json(dbModel))
