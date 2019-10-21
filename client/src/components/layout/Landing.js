@@ -12,7 +12,7 @@ export default function() {
         <div className="col s12 center-align">
 
         <div id ="bg">
-      <img src={background}>
+      <img src={background} alt="starry night sky">
       </img>
     </div>
 

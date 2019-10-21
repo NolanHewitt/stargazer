@@ -26,10 +26,10 @@ export default function Login({ history }) {
       <div style={{ marginTop: "4rem" }} className="row">
         <div className="col s8 offset-s2">
 
-          <div id="bg">
-            <img src={background}>
-            </img>
-          </div>
+        <div id ="bg">
+      <img src={background} alt="starry night sky">
+      </img>
+    </div>
 
 
           <Link to="/" className="btn-flat waves-effect">
