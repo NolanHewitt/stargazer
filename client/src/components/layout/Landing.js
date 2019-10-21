@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Landing.css";
 
 export default function() {
   return (
@@ -7,13 +8,11 @@ export default function() {
       <div className="row">
         <div className="col s12 center-align">
           <h4>
-            <b>Build</b> a login/auth app with the{" "}
-            <span style={{ fontFamily: "monospace" }}>MERN</span> stack from
-            scratch
+            <b className="white-text">View the skies!</b>{" "}
+            <span style={{ fontFamily: "Star Jedi" }}></span>
           </h4>
-          <p className="flow-text grey-text text-darken-1">
-            Create a (minimal) full-stack app with user authentication via
-            passport and JWTs
+          <p className="flow-text white-text">
+            Share your thoughts with others
           </p>
           <br />
           <div className="col s6">
