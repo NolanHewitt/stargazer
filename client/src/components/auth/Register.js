@@ -37,10 +37,10 @@ export default function Register({ history }) {
             home
           </Link>
           <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-            <h4>
+            <h4 style={{ color:"white" }}>
               <b>Register</b> below
             </h4>
-            <p className="grey-text text-darken-1">
+            <p  className="white-text text-darken-1">
               Already have an account? <Link to="/login">Log in</Link>
             </p>
           </div>
@@ -60,7 +60,7 @@ export default function Register({ history }) {
             }}
           >
             <div className="input-field col s12">
-              <input
+              <input style={{ color:"white" }}
                 onChange={event => setName(event.target.value)}
                 value={name}
                 error={errors.name}
@@ -70,11 +70,11 @@ export default function Register({ history }) {
                   invalid: errors.name
                 })}
               />
-              <label htmlFor="name">Name</label>
+              <label style={{ color:"white" }} htmlFor="name">Name</label>
               <span className="red-text">{errors.name}</span>
             </div>
             <div className="input-field col s12">
-              <input
+              <input style={{ color:"white" }}
                 onChange={event => setEmail(event.target.value)}
                 value={email}
                 error={errors.email}
@@ -84,11 +84,11 @@ export default function Register({ history }) {
                   invalid: errors.email
                 })}
               />
-              <label htmlFor="email">Email</label>
+              <label style={{ color:"white" }} htmlFor="email">Email</label>
               <span className="red-text">{errors.email}</span>
             </div>
             <div className="input-field col s12">
-              <input
+              <input style={{ color:"white" }}
                 onChange={event => setPassword(event.target.value)}
                 value={password}
                 error={errors.password}
@@ -98,11 +98,11 @@ export default function Register({ history }) {
                   invalid: errors.password
                 })}
               />
-              <label htmlFor="password">Password</label>
+              <label style={{ color:"white" }} htmlFor="password">Password</label>
               <span className="red-text">{errors.password}</span>
             </div>
             <div className="input-field col s12">
-              <input
+              <input style={{ color:"white" }}
                 onChange={event => setPassword2(event.target.value)}
                 value={password2}
                 error={errors.password2}
@@ -112,7 +112,7 @@ export default function Register({ history }) {
                   invalid: errors.password2
                 })}
               />
-              <label htmlFor="password2">Confirm Password</label>
+              <label style={{ color:"white" }} htmlFor="password2">Confirm Password</label>
               <span className="red-text">{errors.password2}</span>
             </div>
             <div className="col s12" style={{ paddingLeft: "11.250px" }}>

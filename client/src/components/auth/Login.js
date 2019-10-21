@@ -37,10 +37,10 @@ export default function Login({ history }) {
             home
           </Link>
           <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-            <h4>
-              <b>Login</b> below
+            <h4 style={{ color:"white" }}>
+              <b >Login</b> below
             </h4>
-            <p className="grey-text text-darken-1">
+            <p className="white-text text-darken-1">
               Don't have an account? <Link to="/register">Register</Link>
             </p>
           </div>
@@ -58,7 +58,7 @@ export default function Login({ history }) {
             }}
           >
             <div className="input-field col s12">
-              <input
+              <input style={{ color:"white" }}
                 onChange={e => setEmail(e.target.value)}
                 value={email}
                 error={errors.email}
@@ -68,14 +68,14 @@ export default function Login({ history }) {
                   invalid: errors.email || errors.emailnotfound
                 })}
               />
-              <label htmlFor="email">Email</label>
+              <label style={{ color:"white" }} htmlFor="email">Email</label>
               <span className="red-text">
                 {errors.email}
                 {errors.emailnotfound}
               </span>
             </div>
             <div className="input-field col s12">
-              <input
+              <input style={{ color:"white" }}
                 onChange={e => setPassword(e.target.value)}
                 value={password}
                 error={errors.password}
@@ -85,7 +85,7 @@ export default function Login({ history }) {
                   invalid: errors.password || errors.passwordincorrect
                 })}
               />
-              <label htmlFor="password">Password</label>
+              <label style={{ color:"white" }} htmlFor="password">Password</label>
               <span className="red-text">
                 {errors.password}
                 {errors.passwordincorrect}
