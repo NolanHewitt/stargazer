@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Landing.css";
-import background from "../images/background.jpg"
+import background from "../images/background.jpg";
+import Skywatch from "../skywheel/watch";
 
 export default function() {
   return (
-
+<>
+<Skywatch/>
 
     <div style={{ height: "75vh" }} className="container valign-wrapper">
       <div className="row">
@@ -53,7 +55,7 @@ export default function() {
         </div>
       </div>
     </div>
-    
+    </>
   );
 
 }
