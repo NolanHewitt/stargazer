@@ -1,6 +1,7 @@
 import React, { useContext,} from "react";
 import PropTypes from "prop-types";
 import Locator from '../locator/locator'
+import Comment from "../Comment/Comment.js"
 
 import Skywatch from "../skywheel/watch"
 
@@ -52,8 +53,9 @@ export default function Dashboard() {
 
 
         </div>
-
+            
       </div>
+      <Comment/>
     </div>
     </>
   );
