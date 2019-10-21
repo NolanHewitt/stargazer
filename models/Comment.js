@@ -9,10 +9,13 @@ const commentSchema = new Schema({
 
   text: String,
 
-  timestamp: { type: Date, default: Date.now }
+  timestamp: {
+    type: Date,
+    default: Date.now
+  }
 
 });
 
+const Comment = mongoose.model("comments", commentSchema);
 
-
-module.exports = Comment = mongoose.model("comments", commentSchema);
+module.exports = Comment;

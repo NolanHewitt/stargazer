@@ -18,7 +18,17 @@ const UserSchema = new Schema({
   date: {
     type: Date,
     default: Date.now
-  }
+  },
+  comments: [
+    {
+      // Store ObjectIds in the array
+      type: Schema.Types.ObjectId,
+      // The ObjectIds will refer to the ids in the Note model
+      ref: "comments"
+    }
+  ]
 });
 
-module.exports = User = mongoose.model("users", UserSchema);
+const User = mongoose.model("users", UserSchema);
+
+module.exports = User;

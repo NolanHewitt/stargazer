@@ -1,29 +1,44 @@
 const db = require("../models");
 
 module.exports = {
+    // will return the seven most recent comments
+    mostRecent: function (req, res) {
+        db.Comment
+            .find({})
+            .sort({
+                'timestamp': -1
+            })
+            .limit(7)
+            .then( dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
+    },
     findAll: function (req, res) {
         db.Comment
             .find(req.query)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
-    findById: function(req, res) {
+    findById: function (req, res) {
         db.Comment
-        .findById(req.params.id)
-        .then(dbModel => res.json(dbModel))
-        .catch(err => res.status(422).json(err));
+            .findById(req.params.id)
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
     },
     create: function (req, res) {
+        console.log("we're in the controller!");
+        console.log(req.body);
         db.Comment
             .create(req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
-    remove: function(req, res) {
+    remove: function (req, res) {
         db.Comment
-        .findById({ _id: req.params.id })
-        .then(dbModel =>dbModel.remove())
-        .then(dbModel => res.json(dbModel))
-        .catch(err => res.status(422).json(err));
+            .findById({
+                _id: req.params.id
+            })
+            .then(dbModel => dbModel.remove())
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
     }
 };
