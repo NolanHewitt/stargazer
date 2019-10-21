@@ -1,12 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Landing.css";
+import background from "../images/background.jpg"
 
 export default function() {
   return (
+
+
     <div style={{ height: "75vh" }} className="container valign-wrapper">
       <div className="row">
         <div className="col s12 center-align">
+
+        <div id ="bg">
+      <img src={background}>
+      </img>
+    </div>
+
           <h4>
             <b className="white-text">View the skies!</b>{" "}
             <span style={{ fontFamily: "Star Jedi" }}></span>
@@ -44,5 +53,7 @@ export default function() {
         </div>
       </div>
     </div>
+    
   );
+
 }

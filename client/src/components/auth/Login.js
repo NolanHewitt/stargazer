@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import classnames from "classnames";
+import background from "../images/background.jpg"
 
 import "./Login.css";
 
@@ -24,6 +25,13 @@ export default function Login({ history }) {
     <div className="container">
       <div style={{ marginTop: "4rem" }} className="row">
         <div className="col s8 offset-s2">
+
+        <div id ="bg">
+      <img src={background}>
+      </img>
+    </div>
+
+
           <Link to="/" className="btn-flat waves-effect">
             <i className="material-icons left">keyboard_backspace</i> Back to
             home

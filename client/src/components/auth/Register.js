@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import classnames from "classnames";
+import background from "../images/background.jpg"
 
 import "./Register.css";
 
@@ -25,6 +26,12 @@ export default function Register({ history }) {
     <div className="container">
       <div className="row">
         <div className="col s8 offset-s2">
+
+        <div id ="bg">
+      <img src={background}>
+      </img>
+    </div>
+
           <Link to="/" className="btn-flat waves-effect">
             <i className="material-icons left">keyboard_backspace</i> Back to
             home

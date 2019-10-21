@@ -16,6 +16,8 @@ export default function Dashboard() {
 
   return (
     <>
+    
+
     <div id ="bg">
       <img src={background}>
       </img>
@@ -34,9 +36,25 @@ export default function Dashboard() {
 
 
           </h4>
-          <button
+          
+        </div>
+
+        <Comment/>
+
+        <History>
+<HistoryItem>
+  {/* Comment History to go here at some point! */}
+</HistoryItem>
+</History>
+      </div>
+    </div>
+
+    <button
             style={{
-              width: "85px"
+              width: "85px",
+              marginTop: "15%",
+              marginLeft: "75%",
+              position: "fixed",
             }}
             onClick={e => {
               e.preventDefault();
@@ -46,19 +64,8 @@ export default function Dashboard() {
           >
             Logout
           </button>
-        </div>
-
-<Compass/>
 
 
-        <Comment/>
-        <History>
-<HistoryItem>
-  {/* Comment History to go here at some point! */}
-</HistoryItem>
-</History>
-      </div>
-    </div>
     </>
   );
 }
