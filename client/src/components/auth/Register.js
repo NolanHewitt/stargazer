@@ -46,7 +46,7 @@ export default function Register({ history }) {
             <h4>
               <b className="white-text">Register below</b>
             </h4>
-            <p className="white-text">
+            <p className="white-text text-darken-1">
               Already have an account? <Link to="/login">Log in</Link>
             </p>
           </div>
