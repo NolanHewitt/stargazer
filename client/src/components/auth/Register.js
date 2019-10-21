@@ -28,7 +28,7 @@ export default function Register({ history }) {
         <div className="col s8 offset-s2">
 
         <div id ="bg">
-      <img src={background}>
+      <img src={background} alt="starry night sky">
       </img>
     </div>
 
@@ -38,9 +38,9 @@ export default function Register({ history }) {
           </Link>
           <div className="col s12" style={{ paddingLeft: "11.250px" }}>
             <h4>
-              <b>Register</b> below
+              <b className="white-text">Register below</b>
             </h4>
-            <p className="grey-text text-darken-1">
+            <p className="white-text">
               Already have an account? <Link to="/login">Log in</Link>
             </p>
           </div>
@@ -70,7 +70,7 @@ export default function Register({ history }) {
                   invalid: errors.name
                 })}
               />
-              <label htmlFor="name">Name</label>
+              <label className="white-text" htmlFor="name">Name</label>
               <span className="red-text">{errors.name}</span>
             </div>
             <div className="input-field col s12">
@@ -84,7 +84,7 @@ export default function Register({ history }) {
                   invalid: errors.email
                 })}
               />
-              <label htmlFor="email">Email</label>
+              <label className="white-text" htmlFor="email">Email</label>
               <span className="red-text">{errors.email}</span>
             </div>
             <div className="input-field col s12">
@@ -98,7 +98,7 @@ export default function Register({ history }) {
                   invalid: errors.password
                 })}
               />
-              <label htmlFor="password">Password</label>
+              <label className="white-text" htmlFor="password">Password</label>
               <span className="red-text">{errors.password}</span>
             </div>
             <div className="input-field col s12">
@@ -112,7 +112,7 @@ export default function Register({ history }) {
                   invalid: errors.password2
                 })}
               />
-              <label htmlFor="password2">Confirm Password</label>
+              <label className="white-text" htmlFor="password2">Confirm Password</label>
               <span className="red-text">{errors.password2}</span>
             </div>
             <div className="col s12" style={{ paddingLeft: "11.250px" }}>

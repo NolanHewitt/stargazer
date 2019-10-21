@@ -21,7 +21,7 @@ window.addEventListener('deviceorientation', function(e) {
 
   return (
         <>
-        <img id="compass" src={compass}></img>
+        <img id="compass" src={compass} alt="compass"></img>
         </>
   );
 }

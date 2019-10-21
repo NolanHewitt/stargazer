@@ -27,7 +27,7 @@ export default function Login({ history }) {
         <div className="col s8 offset-s2">
 
         <div id ="bg">
-      <img src={background}>
+      <img src={background} alt="starry night sky">
       </img>
     </div>
 
