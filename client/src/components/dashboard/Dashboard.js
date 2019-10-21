@@ -5,9 +5,8 @@ import Skywatch from "../skywheel/watch";
 import { History, HistoryItem } from "../userHistory";
 import { AuthContext } from "../../auth/auth";
 import Comment from "../Comment/index";
-import Compass from "../compass/compass";
 import './dashboard.css';
-import background from "../images/background.jpg";
+import background from "../images/background.jpg"
 
 export default function Dashboard() {
   const { user, logoutUser } = useContext(AuthContext);
@@ -16,6 +15,10 @@ export default function Dashboard() {
 
   return (
     <>
+    <div id ="bg">
+      <img src={background} alt="starry night sky">
+      </img>
+    </div>
       {/* <Locator/> */}
       < Skywatch />
       <div id="bg">
@@ -34,21 +37,9 @@ export default function Dashboard() {
 
 
             </h4>
-            <button
-              style={{
-                width: "85px"
-              }}
-              onClick={e => {
-                e.preventDefault();
-                logoutUser();
-              }}
-              className="btn waves-effect waves-light hoverable blue accent-3"
-            >
-              Logout
-          </button>
+            
           </div>
 
-          <Compass />
 
 
           <Comment />
@@ -59,6 +50,23 @@ export default function Dashboard() {
           </History>
         </div>
       </div>
+
+      <button
+              style={{
+                width: "85px",
+                position: "fixed",
+                marginLeft: "75%",
+                marginTop: "15%",
+              }}
+              onClick={e => {
+                e.preventDefault();
+                logoutUser();
+              }}
+              className="btn waves-effect waves-light hoverable blue accent-3"
+            >
+              Logout
+          </button>
+
     </>
   );
 }
