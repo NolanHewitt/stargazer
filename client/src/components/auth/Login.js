@@ -26,10 +26,10 @@ export default function Login({ history }) {
       <div style={{ marginTop: "4rem" }} className="row">
         <div className="col s8 offset-s2">
 
-        <div id ="bg">
-      <img src={background}>
-      </img>
-    </div>
+          <div id="bg">
+            <img src={background}>
+            </img>
+          </div>
 
 
           <Link to="/" className="btn-flat waves-effect">
@@ -38,9 +38,9 @@ export default function Login({ history }) {
           </Link>
           <div className="col s12" style={{ paddingLeft: "11.250px" }}>
             <h4>
-              <b>Login</b> below
+              <b className="white-text">Login below</b>
             </h4>
-            <p className="grey-text text-darken-1">
+            <p className="white-text text-darken-1">
               Don't have an account? <Link to="/register">Register</Link>
             </p>
           </div>
@@ -68,13 +68,13 @@ export default function Login({ history }) {
                   invalid: errors.email || errors.emailnotfound
                 })}
               />
-              <label htmlFor="email">Email</label>
-              <span className="red-text">
+              <label className="white-text" htmlFor="email">Email</label>
+              <span className="white-text">
                 {errors.email}
                 {errors.emailnotfound}
               </span>
             </div>
-            <div className="input-field col s12">
+            <div className="input-field col s12 white-text">
               <input
                 onChange={e => setPassword(e.target.value)}
                 value={password}
@@ -85,8 +85,8 @@ export default function Login({ history }) {
                   invalid: errors.password || errors.passwordincorrect
                 })}
               />
-              <label htmlFor="password">Password</label>
-              <span className="red-text">
+              <label className="white-text" htmlFor="password">Password</label>
+              <span className="white-text">
                 {errors.password}
                 {errors.passwordincorrect}
               </span>
