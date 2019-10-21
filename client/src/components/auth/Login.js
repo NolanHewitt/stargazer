@@ -58,7 +58,7 @@ export default function Login({ history }) {
             }}
           >
             <div className="input-field col s12">
-              <input
+              <input style={{color: "white"}}
                 onChange={e => setEmail(e.target.value)}
                 value={email}
                 error={errors.email}
@@ -75,7 +75,7 @@ export default function Login({ history }) {
               </span>
             </div>
             <div className="input-field col s12 white-text">
-              <input
+              <input style={{color: "white"}}
                 onChange={e => setPassword(e.target.value)}
                 value={password}
                 error={errors.password}
