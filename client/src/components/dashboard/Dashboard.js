@@ -5,7 +5,6 @@ import Skywatch from "../skywheel/watch";
 import { History, HistoryItem } from "../userHistory";
 import { AuthContext } from "../../auth/auth";
 import Comment from "../Comment/index";
-import Compass from "../compass/compass";
 import './dashboard.css';
 import background from "../images/background.jpg"
 

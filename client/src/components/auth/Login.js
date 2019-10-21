@@ -2,7 +2,8 @@ import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import classnames from "classnames";
-import background from "../images/background.jpg"
+import background from "../images/background.jpg";
+import Skywatch from "../skywheel/watch";
 
 import "./Login.css";
 
@@ -22,6 +23,8 @@ export default function Login({ history }) {
   }, [user, history]);
 
   return (
+    <>
+    <Skywatch/>
     <div className="container">
       <div style={{ marginTop: "4rem" }} className="row">
         <div className="col s8 offset-s2">
@@ -109,6 +112,7 @@ export default function Login({ history }) {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
