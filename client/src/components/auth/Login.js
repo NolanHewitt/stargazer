@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 import background from "../images/background.jpg"
-import Skywatch from "../skywheel/watch"
 
 import "./Login.css";
 
@@ -23,11 +22,7 @@ export default function Login({ history }) {
   }, [user, history]);
 
   return (
-    <>
-    <Skywatch/>
     <div className="container">
-
-      
       <div style={{ marginTop: "4rem" }} className="row">
         <div className="col s8 offset-s2">
 
@@ -37,10 +32,13 @@ export default function Login({ history }) {
     </div>
 
 
-         
+          <Link to="/" className="btn-flat waves-effect">
+            <i className="material-icons left">keyboard_backspace</i> Back to
+            home
+          </Link>
           <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-            <h4 style={{ color:"white" }}>
-              <b >Login</b> below
+            <h4>
+              <b className="white-text">Login below</b>
             </h4>
             <p className="white-text text-darken-1">
               Don't have an account? <Link to="/register">Register</Link>
@@ -60,7 +58,7 @@ export default function Login({ history }) {
             }}
           >
             <div className="input-field col s12">
-              <input style={{ color:"white" }}
+              <input
                 onChange={e => setEmail(e.target.value)}
                 value={email}
                 error={errors.email}
@@ -70,14 +68,14 @@ export default function Login({ history }) {
                   invalid: errors.email || errors.emailnotfound
                 })}
               />
-              <label style={{ color:"white" }} htmlFor="email">Email</label>
-              <span className="red-text">
+              <label className="white-text" htmlFor="email">Email</label>
+              <span className="white-text">
                 {errors.email}
                 {errors.emailnotfound}
               </span>
             </div>
-            <div className="input-field col s12">
-              <input style={{ color:"white" }}
+            <div className="input-field col s12 white-text">
+              <input
                 onChange={e => setPassword(e.target.value)}
                 value={password}
                 error={errors.password}
@@ -87,8 +85,8 @@ export default function Login({ history }) {
                   invalid: errors.password || errors.passwordincorrect
                 })}
               />
-              <label style={{ color:"white" }} htmlFor="password">Password</label>
-              <span className="red-text">
+              <label className="white-text" htmlFor="password">Password</label>
+              <span className="white-text">
                 {errors.password}
                 {errors.passwordincorrect}
               </span>
@@ -111,9 +109,7 @@ export default function Login({ history }) {
         </div>
       </div>
     </div>
-    </>
   );
-  
 }
 
 Login.propTypes = {
