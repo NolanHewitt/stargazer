@@ -9,7 +9,7 @@ export default function() {
 
 
     setInterval(function(){
-        $('#image').css('transform','rotate(' + angle + 'deg)');
+        $('#compass').css('transform','rotate(' + angle + 'deg)');
      }, 17);
 
 

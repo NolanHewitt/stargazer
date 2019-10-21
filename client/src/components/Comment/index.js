@@ -14,7 +14,7 @@ function Comment () {
             <option value="other">Other</option>
           </select>
           <br/>
-          <textarea id= "comment-box" rows= "4">Comment</textarea>
+          <textarea style={{ color:"white" }} id= "comment-box" rows= "4">Comment</textarea>
           <button id="commentBtn">Post</button>
         </form>
       </div>

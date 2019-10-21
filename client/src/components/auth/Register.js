@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import classnames from "classnames";
 import background from "../images/background.jpg"
+import Skywatch from "../skywheel/watch"
 
 import "./Register.css";
 
@@ -23,7 +24,12 @@ export default function Register({ history }) {
   }, [user, history]);
 
   return (
+    <>
+    <Skywatch/>
     <div className="container">
+
+
+      
       <div className="row">
         <div className="col s8 offset-s2">
 
@@ -60,7 +66,7 @@ export default function Register({ history }) {
             }}
           >
             <div className="input-field col s12">
-              <input
+              <input style={{ color:"white" }}
                 onChange={event => setName(event.target.value)}
                 value={name}
                 error={errors.name}
@@ -74,7 +80,7 @@ export default function Register({ history }) {
               <span className="red-text">{errors.name}</span>
             </div>
             <div className="input-field col s12">
-              <input
+              <input style={{ color:"white" }}
                 onChange={event => setEmail(event.target.value)}
                 value={email}
                 error={errors.email}
@@ -88,7 +94,7 @@ export default function Register({ history }) {
               <span className="red-text">{errors.email}</span>
             </div>
             <div className="input-field col s12">
-              <input
+              <input style={{ color:"white" }}
                 onChange={event => setPassword(event.target.value)}
                 value={password}
                 error={errors.password}
@@ -102,7 +108,7 @@ export default function Register({ history }) {
               <span className="red-text">{errors.password}</span>
             </div>
             <div className="input-field col s12">
-              <input
+              <input style={{ color:"white" }}
                 onChange={event => setPassword2(event.target.value)}
                 value={password2}
                 error={errors.password2}
@@ -133,5 +139,6 @@ export default function Register({ history }) {
         </div>
       </div>
     </div>
+    </>
   );
 }
