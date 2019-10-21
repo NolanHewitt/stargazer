@@ -1,5 +1,5 @@
 import React from "react";
-import "../Comment/Comment.css"
+// import "../Comment/Comment.css"
 
 function Comment () {
     return (
@@ -8,14 +8,14 @@ function Comment () {
           <select name="sights">
             <option className="comment-options" value="nothing" >Nothing</option>
             <option value="shootingStar">Shooting Star</option>
-            <option value="sattelite">Sattelite</option>
+            <option value="sattelite">Satellite</option>
             <option value="plane">Plane</option>
             <option value="ufo">UFO</option>
             <option value="other">Other</option>
           </select>
           <br/>
           <textarea id= "comment-box" rows= "4">Comment</textarea>
-          <button>Post</button>
+          <button id="commentBtn">Post</button>
         </form>
       </div>
     );
