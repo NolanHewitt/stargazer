@@ -73,7 +73,7 @@ export default function getWeather() {
         >
             Weather
     </button>
-            <div class="container" id="weather-container">
+            <div class="containerW" id="weather-container">
                 <div class="weather-box">
                     <div class="row1">
                         <h2 class="weather-location">Location</h2>
