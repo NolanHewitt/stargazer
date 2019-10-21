@@ -1,8 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import classnames from "classnames";
-import background from "../images/background.jpg"
-import Skywatch from "../skywheel/watch"
+import background from "../images/background.jpg";
+import Skywatch from "../skywheel/watch";
 
 import "./Register.css";
 
