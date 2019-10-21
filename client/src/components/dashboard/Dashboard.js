@@ -22,6 +22,7 @@ export default function Dashboard() {
     </div>
       {/* <Locator/> */}
       < Skywatch />
+      <Weather />
       <div id="bg">
         <img src={background} alt="starry night sky">
         </img>
@@ -40,7 +41,6 @@ export default function Dashboard() {
             </h4>
             
           </div>
-
 
 
           <Comment />
