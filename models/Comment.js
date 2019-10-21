@@ -15,6 +15,10 @@ const commentSchema = new Schema({
   timestamp: {
     type: Date,
     default: Date.now
+  },
+  tone: {
+    type: String,
+    required: true
   }
 
 });
