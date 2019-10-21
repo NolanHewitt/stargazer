@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
+import Compass from "../compass/compass"
+
 
 export default function() {
   return (
@@ -10,11 +12,13 @@ export default function() {
         <div className="nav-wrapper">
           <Link
             to="/"
-            style={{ fontFamily: "Star Jedi"
+            style={{ fontFamily: "Star Jedi",
             }}
             className="col s5 brand-logo center white-text"//WORKING ON GETTING THIS TO SPARKLE!!
           >Star-Gazer
           </Link>
+
+          <Compass/>
         </div>
       </nav>
     </div>
