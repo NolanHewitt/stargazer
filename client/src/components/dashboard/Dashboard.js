@@ -5,6 +5,7 @@ import Skywatch from "../skywheel/watch";
 import { History, HistoryItem } from "../userHistory";
 import { AuthContext } from "../../auth/auth";
 import Comment from "../Comment/index";
+import Weather from "../Weather/index";
 import './dashboard.css';
 import background from "../images/background.jpg"
 
@@ -21,6 +22,7 @@ export default function Dashboard() {
     </div>
       {/* <Locator/> */}
       < Skywatch />
+      <Weather />
       <div id="bg">
         <img src={background} alt="starry night sky">
         </img>
@@ -39,7 +41,6 @@ export default function Dashboard() {
             </h4>
             
           </div>
-
 
 
           <Comment />
