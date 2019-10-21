@@ -39,6 +39,20 @@
   }
 }
 
+@keyframes fadeOutin {
+  0% {
+    opacity: 0;
+  }
+
+  45% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .fourth-text {
   font-size: 3.4rem;
   position: absolute;
@@ -49,4 +63,15 @@
   animation-name: fadeInOut;
   animation-delay: 0.5s;
   animation-duration: 5s;
+}
+
+#commentsa {
+  color: white;
+  animation-name: fadeOutin;
+  animation-delay: 0s;
+  animation-duration: 10.5s;
+}
+
+#removeafterabit{
+  margin-top: -35%;
 }

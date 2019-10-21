@@ -13,15 +13,20 @@ export default function Dashboard() {
   const { user, logoutUser } = useContext(AuthContext);
 
   function remover() {
-
   setTimeout(function(){
     document.getElementById("removeafterabit").style.display = "none";
-    document.getElementById("commentsa").style.marginTop = "-95%"
+    document.getElementById("commentsa").style.marginTop = "-55%"
     }, 5000);
   };
-
   remover();
 
+  function addweather() {
+    setTimeout(function(){
+      document.getElementById("emojid").style.display = "block";
+      }, 10600);
+    };
+    addweather();
+  
 
 
   return (
@@ -79,7 +84,6 @@ export default function Dashboard() {
             >
               Logout
           </button>
-
     </>
   );
 }
