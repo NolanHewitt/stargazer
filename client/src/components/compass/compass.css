@@ -1,0 +1,9 @@
+img {
+    width: 12.5%;
+}
+#compass {
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 1%;
+    z-index: 5;
+}
