@@ -3,6 +3,7 @@ const db = require("../models");
 module.exports = {
     // will return the seven most recent comments
     mostRecent: function (req, res) {
+        console.log(req.user);
         db.Comment
             .find({})
             .sort({
