@@ -21,6 +21,10 @@ export default function Dashboard() {
     </div>
       {/* <Locator/> */}
       < Skywatch />
+      <div id="bg">
+        <img src={background} alt="starry night sky">
+        </img>
+      </div>
 
       <div style={{ height: "75vh", color: "white" }} className="container valign-wrapper">
         <div className="row">
