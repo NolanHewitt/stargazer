@@ -3,18 +3,21 @@ select {
     color: goldenrod;
     background: black;
 }
+#commentsa {
+    display: block;
+}
 .comments {
-    width: 40%;
-    padding: 1%;
-    border: 10px solid black;
+    width: 100%;
+    padding: 2%;
+    border: 7px solid black;
     background: rgb(9, 9, 95);
     color: goldenrod;
     text-align: center;
-    margin: 0 auto;
+    margin-left: 2.5%;
     
 }
 #comment-box {
-    height: 100px;
+    height: 55px;
     color: goldenrod;
 }
 option {
@@ -25,4 +28,5 @@ button {
     border-radius: 10px;
     font-size: 25px;
     color: goldenrod;
+
 }

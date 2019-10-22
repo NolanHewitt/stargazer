@@ -1,0 +1,27 @@
+.containerW{
+    display: none;
+    color: white;
+    position: absolute;
+}
+
+#rowW {
+    border: 4px dotted greenyellow;
+    background: black;
+    width: 80%;
+    margin-top: 19%;
+    margin-left: 12.5%;
+    text-align: center;
+}
+
+h3 {
+    font-size: 150%;
+}
+
+h2 {
+    font-size: 150%;
+}
+
+.emoji {
+    font-size: 200%;
+    display: none;
+}

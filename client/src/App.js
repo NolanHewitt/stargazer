@@ -10,8 +10,6 @@ import Dashboard from "./components/dashboard/Dashboard";
 
 import { Auth } from "./auth/auth";
 
-import "./App.css";
-
 export default function() {
   return (
     <Auth>

@@ -1,0 +1,77 @@
+#bg {
+    position: fixed; 
+    top: -50%; 
+    left: -50%; 
+    width: 200%; 
+    height: 200%;
+    z-index: -10;
+  }
+  #bg img {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    min-width: 50%;
+    min-height: 50%;
+  }
+
+  .animation-box {
+  width: 100%;
+  height: 27.5rem;
+  margin-top: -70%;
+  overflow: hidden;
+  position: relative;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes fadeOutin {
+  0% {
+    opacity: 0;
+  }
+
+  45% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fourth-text {
+  font-size: 3.4rem;
+  position: absolute;
+  top: 10.5rem;
+  left: 10%;
+  opacity: 0;
+  color: white;
+  animation-name: fadeInOut;
+  animation-delay: 0.5s;
+  animation-duration: 5s;
+}
+
+#commentsa {
+  color: white;
+  animation-name: fadeOutin;
+  animation-delay: 0s;
+  animation-duration: 10.5s;
+}
+
+#removeafterabit{
+  margin-top: -35%;
+}
