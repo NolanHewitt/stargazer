@@ -48,7 +48,7 @@ export default function getWeather() {
         temperatureLow.textContent = temp_min;
         temperatureLocation.textContent = location;
         temperatureDescription.textContent = description;
-        temperatureImage.setAttribute = imageIcon;
+        temperatureImage.setAttribute("src",imageIcon);
     });
 
 
@@ -78,22 +78,36 @@ export default function getWeather() {
                     <div class="row1">
                         <h2 class="weather-location">Location</h2>
                     </div>
+                    <div class="row3">
+                    <h2 class="degree-section">Temperature</h2>
+                    <span class="temp-type">°F</span>
+                    </div>
                     <div class="row2">
-                        <h1 class="degree-section">Temperature: °F</h1>
-                        <h3 class="degree-high">Max. Temperature: °F</h3>
-                        <h3 class="degree-low">Min. Temperature: °F</h3>
-
+                    <img class="weather-image" src="" alt="" width="250" height="128" z-index="" />
+           </div>
+           <div class="row2">
+                    <h3 class="weather-description">Description: </h3>
+                    </div>
+                    <div class="row3"> 
+                    <span class="temp-type">High Temp:&nbsp;</span>                      
+                        <h5 class="degree-high" span="Max. Temperature:">Max. Temperature: °F</h5>
+                        <span class="temp-type">°F</span>
+                        </div>
+                        <div class="row3"> 
+                        <span class="temp-type">Low Temp:&nbsp;</span>
+                        <h5 class="degree-low">Min. Temperature: °F</h5>
                         <span class="temp-type">°F</span>
                     </div>
-                    <img class="weather-image" src="" alt="" width="128" height="128" />
-                    <h2 class="weather-description">Description: </h2>
                 </div>  
-                <button
+                <button class="weather-btn"
             style={{
                 width: "150px",
                 borderRadius: "3px",
                 letterSpacing: "1.5px",
-                marginTop: "1rem"
+                marginTop: "1rem",
+                display: "flex",
+                border: "50%",
+                
             }}
             onClick={e => {
                 e.preventDefault();
