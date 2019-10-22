@@ -7,12 +7,22 @@ const Schema = mongoose.Schema;
 // Create Schema
 const commentSchema = new Schema({
 
-  text: String,
+  text: {
+    type: String,
+    required: true
+  },
 
-  timestamp: { type: Date, default: Date.now }
+  timestamp: {
+    type: Date,
+    default: Date.now
+  },
+  tone: {
+    type: String,
+    required: true
+  }
 
 });
 
+const Comment = mongoose.model("comments", commentSchema);
 
-
-module.exports = Comment = mongoose.model("comments", commentSchema);
+module.exports = Comment;

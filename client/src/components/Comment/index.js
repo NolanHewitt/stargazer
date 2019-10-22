@@ -1,10 +1,33 @@
-import React from "react";
-// import "../Comment/Comment.css"
+import React, {useEffect, useState} from "react";
 
-function Comment (props) {
+import "../Comment/Comment.css"
+import { PromiseProvider } from "mongoose";
+
+function Comment(props) {
+
+  const [comment, setComment] = useState("");
+
+
+  function postHandler(event) {
+    event.preventDefault();
+    console.log("posted a comment!")
+    fetch("/api/comments/", {
+        method: "POST",
+        body: JSON.stringify({
+          text: comment
+        }),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      }
+
+    )
+  };
+  
+
     return (
-      <div style={"display:" + props.display} className = "comments">
-        <form> What did you see?
+      <div id="commentsa" className = "comments" style={"display" + props.display}>
+        <form > What did you see?
           <select name="sights">
             <option className="comment-options" value="nothing" >Nothing</option>
             <option value="shootingStar">Shooting Star</option>
@@ -14,8 +37,8 @@ function Comment (props) {
             <option value="other">Other</option>
           </select>
           <br/>
-          <textarea id= "comment-box" rows= "4">Comment</textarea>
-          <button id="commentBtn">Post</button>
+          <textarea id= "comment-box" value = {comment} onChange = {event => setComment(event.target.value)} rows= "4">Comment</textarea>
+          <button id="commentBtn" onClick = {postHandler}>Post</button>
         </form>
       </div>
     );
