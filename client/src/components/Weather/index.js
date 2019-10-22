@@ -33,14 +33,16 @@ export default function getWeather() {
 
     }).then(function (data) {
         console.log(data);
-
+        let imageIcon = "http://openweathermap.org/img/wn/"+ icon +"@2x.png"
         // //set dom elements from API
+
         document.getElementById("weather-location").innerHTML = "Your Location: " + location;
         document.getElementById("wind").innerHTML = "Wind: " + wind + "mph";
         document.getElementById("degree-section").innerHTML = "Temperature: " + fahrenheit + "°F";
         document.getElementById("humid").innerHTML = "Humidity: " + humid + "%";
         document.getElementById("clouds").innerHTML = "Clouds: " + clouds + "% Cloudy";
         document.getElementById("desc").innerHTML = "Weather: " + description;
+        document.getElementById("weather-icon").setAttribute("src", imageIcon);
     });
 
 

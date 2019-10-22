@@ -174,7 +174,7 @@ myFunction2();
           document.getElementById("sun").style.marginLeft = percentFinal+"100%";
 
 
-      }, 250);
+      }, 260);
   }
 myFunction3();
 

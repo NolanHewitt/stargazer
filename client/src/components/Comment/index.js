@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import $ from "jquery";
 
 import "../Comment/Comment.css"
+import { PromiseProvider } from "mongoose";
 
-function Comment() {
+function Comment(props) {
 
   
   const apiWatsonKey = process.env.REACT_APP_WATSON_API_KEY;
@@ -43,7 +44,7 @@ function Comment() {
   
 
     return (
-      <div id="commentsa" className = "comments">
+      <div id="commentsa" className = "comments" style={"display" + props.display}>
         <form > What did you see?
           <select name="sights">
             <option className="comment-options" value="nothing" >Nothing</option>
