@@ -33,14 +33,16 @@ export default function getWeather() {
 
     }).then(function (data) {
         console.log(data);
-
+        let imageIcon = "http://openweathermap.org/img/wn/"+ icon +"@2x.png"
         // //set dom elements from API
+
         document.getElementById("weather-location").innerHTML = "Your Location: " + location;
         document.getElementById("wind").innerHTML = "Wind: " + wind + "mph";
         document.getElementById("degree-section").innerHTML = "Temperature: " + fahrenheit + "°F";
         document.getElementById("humid").innerHTML = "Humidity: " + humid + "%";
         document.getElementById("clouds").innerHTML = "Clouds: " + clouds + "% Cloudy";
         document.getElementById("desc").innerHTML = "Weather: " + description;
+        document.getElementById("weather-icon").setAttribute("src", imageIcon);
     });
 
 
@@ -62,6 +64,7 @@ export default function getWeather() {
                 getWeather();
                 document.getElementById("weather-container").style.display = "block";
             }}
+
             className="emoji btn btn-large waves-effect waves-light hoverable blue accent-3">
             ⛈️
          </button>
@@ -72,6 +75,7 @@ export default function getWeather() {
                         <h3 id="wind">Max. Temperature: °F</h3>
                         <h3 id="degree-section">Temperature: °F</h3>
                         <h3 id="humid">humidity</h3>
+                        <img id="weather-icon" src="" alt=""></img>
                         <h3 id="clouds">clouds</h3>
                         <h3 id="desc">desc</h3>
                         {/* <img class="weather-image" src="" alt="" width="128" height="128" /> */}
@@ -84,6 +88,7 @@ export default function getWeather() {
                 letterSpacing: "1.5px",
                 marginTop: "1rem",
                 marginBottom: "10%"
+
             }}
             onClick={e => {
                 e.preventDefault();
