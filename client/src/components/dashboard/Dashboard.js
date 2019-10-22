@@ -12,6 +12,21 @@ import background from "../images/background.jpg"
 export default function Dashboard() {
   const { user, logoutUser } = useContext(AuthContext);
 
+  function remover() {
+  setTimeout(function(){
+    document.getElementById("removeafterabit").style.display = "none";
+    document.getElementById("commentsa").style.marginTop = "-55%"
+    }, 5000);
+  };
+  remover();
+
+  function addweather() {
+    setTimeout(function(){
+      document.getElementById("emojid").style.display = "block";
+      }, 10600);
+    };
+    addweather();
+  
 
 
   return (
@@ -30,17 +45,19 @@ export default function Dashboard() {
 
       <div style={{ height: "75vh", color: "white" }} className="container valign-wrapper">
         <div className="row">
-          <div className="landing-copy col s12 center-align">
+
+        
+
+  <section id="removeafterabit" class="animation-box">
+          <div className="fourth-text landing-copy col s12 center-align">
             <h4>
               <b>Hey there,</b> {user.name.split(" ")[0]}
               <p style={{ color: "white" }} className="flow-text text-darken-1">
                 You are logged in
             </p>
-
-
             </h4>
-            
           </div>
+          </section>
 
 
           <Comment />
@@ -67,7 +84,6 @@ export default function Dashboard() {
             >
               Logout
           </button>
-
     </>
   );
 }

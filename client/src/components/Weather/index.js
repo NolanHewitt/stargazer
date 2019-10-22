@@ -5,7 +5,7 @@ import "./weather.css"
 export default function getWeather() {
 
     let latitude = 44;
-    let longitude = -93
+    let longitude = -93;
     $.getJSON('https://api.ipgeolocation.io/astronomy?apiKey=2e99e14a862c46a89e3bd1b5ba265340', function (data) {
         latitude = data.location.latitude;
         longitude = data.location.longitude;
@@ -16,108 +16,94 @@ export default function getWeather() {
     let location;
     let icon;
     let fahrenheit;
-    let temp_max;
-    let temp_min;
+    let wind;
     let description;
+    let humid;
+    let clouds;
 
     $.getJSON(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`, function (data) {
 
         location = data.name;
         fahrenheit = data.main.temp;
-        temp_max = data.main.temp_max;
-        temp_min = data.main.temp_min;
+        humid = data.main.humidity;
+        wind = data.wind.speed;
         description = data.weather[0].description;
         icon = data.weather[0].icon;
+        clouds = data.clouds.all;
 
     }).then(function (data) {
         console.log(data);
-
+        let imageIcon = "http://openweathermap.org/img/wn/"+ icon +"@2x.png"
         // //set dom elements from API
 
-        let imageIcon = "http://openweathermap.org/img/wn/" + icon + "@2x.png"
-        console.log(imageIcon)
-        let temperatureDegree = document.querySelector('.degree-section');
-        let temperatureHigh = document.querySelector('.degree-high');
-        let temperatureLow = document.querySelector('.degree-low');
-        let temperatureDescription = document.querySelector('.weather-description');
-        let temperatureImage = document.querySelector('.weather-image');
-        let temperatureLocation = document.querySelector('.weather-location');
-
-        temperatureDegree.textContent = fahrenheit;
-        temperatureHigh.textContent = temp_max;
-        temperatureLow.textContent = temp_min;
-        temperatureLocation.textContent = location;
-        temperatureDescription.textContent = description;
-        temperatureImage.setAttribute("src",imageIcon);
+        document.getElementById("weather-location").innerHTML = "Your Location: " + location;
+        document.getElementById("wind").innerHTML = "Wind: " + wind + "mph";
+        document.getElementById("degree-section").innerHTML = "Temperature: " + fahrenheit + "°F";
+        document.getElementById("humid").innerHTML = "Humidity: " + humid + "%";
+        document.getElementById("clouds").innerHTML = "Clouds: " + clouds + "% Cloudy";
+        document.getElementById("desc").innerHTML = "Weather: " + description;
+        document.getElementById("weather-icon").setAttribute("src", imageIcon);
     });
 
 
 
     return (
-        <>            <button
+        <>           
+         <button
+         id="emojid"
             style={{
-                width: "150px",
+                width: "100px",
                 borderRadius: "3px",
-                letterSpacing: "1.5px",
-                marginTop: "1rem"
+                position:  "absolute",
+                marginTop: "145%",
+                marginLeft: "3%"
+
             }}
             onClick={e => {
                 e.preventDefault();
                 getWeather();
                 document.getElementById("weather-container").style.display = "block";
-
-
-
             }}
-            className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-        >
-            Weather
-    </button>
-            <div class="container" id="weather-container">
-                <div class="weather-box">
-                    <div class="row1">
-                        <h2 class="weather-location">Location</h2>
-                    </div>
-                    <div class="row3">
-                    <h2 class="degree-section">Temperature</h2>
-                    <span class="temp-type">°F</span>
-                    </div>
-                    <div class="row2">
-                    <img class="weather-image" src="" alt="" width="250" height="128" z-index="" />
-           </div>
-           <div class="row2">
-                    <h3 class="weather-description">Description: </h3>
-                    </div>
-                    <div class="row3"> 
-                    <span class="temp-type">High Temp:&nbsp;</span>                      
-                        <h5 class="degree-high" span="Max. Temperature:">Max. Temperature: °F</h5>
-                        <span class="temp-type">°F</span>
-                        </div>
-                        <div class="row3"> 
-                        <span class="temp-type">Low Temp:&nbsp;</span>
-                        <h5 class="degree-low">Min. Temperature: °F</h5>
-                        <span class="temp-type">°F</span>
-                    </div>
-                </div>  
-                <button class="weather-btn"
+
+            className="emoji btn btn-large waves-effect waves-light hoverable blue accent-3">
+            ⛈️
+         </button>
+
+            <div class="containerW" id="weather-container">
+                    <div id="rowW" class="row2">
+                        <h2 id="weather-location">Location</h2>
+                        <h3 id="wind">Max. Temperature: °F</h3>
+                        <h3 id="degree-section">Temperature: °F</h3>
+                        <h3 id="humid">humidity</h3>
+                        <img id="weather-icon" src="" alt=""></img>
+                        <h3 id="clouds">clouds</h3>
+                        <h3 id="desc">desc</h3>
+                        {/* <img class="weather-image" src="" alt="" width="128" height="128" /> */}
+                    <h3 class="weather-description"></h3>
+
+         <button
             style={{
-                width: "150px",
-                borderRadius: "3px",
+                width: "105px",
+                borderRadius: "4px",
                 letterSpacing: "1.5px",
                 marginTop: "1rem",
-                display: "flex",
-                border: "50%",
-                
+                marginBottom: "10%"
+
             }}
             onClick={e => {
                 e.preventDefault();
                 getWeather();
                 document.getElementById("weather-container").style.display = "none";
             }}
-            className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-        >
-            Close
-    </button>              
+            className="closebtnw btn btn-large waves-effect waves-light hoverable blue accent-3">
+                Close
+         </button>    
+
+
+                    </div>
+                    
+            
+                         
             </div>
 
         </>
