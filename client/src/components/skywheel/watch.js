@@ -92,7 +92,7 @@ export default function() {
           document.getElementById("sun").style.marginLeft = percentFinal+"100%";
 
 
-      }, 20000);
+      }, 100);
   }
 myFunction2();
 
@@ -174,7 +174,7 @@ myFunction2();
           document.getElementById("sun").style.marginLeft = percentFinal+"100%";
 
 
-      }, 25000);
+      }, 260);
   }
 myFunction3();
 

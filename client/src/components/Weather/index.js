@@ -69,8 +69,8 @@ export default function getWeather() {
             ⛈️
          </button>
 
-            <div class="containerW" id="weather-container">
-                    <div id="rowW" class="row2">
+            <div className="containerW" id="weather-container">
+                    <div id="rowW" className="row2">
                         <h2 id="weather-location">Location</h2>
                         <h3 id="wind">Max. Temperature: °F</h3>
                         <h3 id="degree-section">Temperature: °F</h3>
@@ -79,7 +79,7 @@ export default function getWeather() {
                         <h3 id="clouds">clouds</h3>
                         <h3 id="desc">desc</h3>
                         {/* <img class="weather-image" src="" alt="" width="128" height="128" /> */}
-                    <h3 class="weather-description"></h3>
+                    <h3 className="weather-description"></h3>
 
          <button
             style={{
