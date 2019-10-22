@@ -1,9 +1,9 @@
 import React from "react";
 // import "../Comment/Comment.css"
 
-function Comment () {
+function Comment (props) {
     return (
-      <div className = "comments">
+      <div style={"display:" + props.display} className = "comments">
         <form> What did you see?
           <select name="sights">
             <option className="comment-options" value="nothing" >Nothing</option>
