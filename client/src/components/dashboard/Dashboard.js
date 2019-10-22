@@ -24,7 +24,7 @@ export default function Dashboard() {
   function addweather() {
     setTimeout(function() {
       document.getElementById("emojid").style.display = "block";
-    }, 10600);
+    }, 5600);
   }
   addweather();
 
@@ -34,8 +34,8 @@ export default function Dashboard() {
         <img src={background} alt="starry night sky"></img>
       </div>
       {/* <Locator/> */}
-      <Skywatch />
-      <Weather />
+      <Skywatch/>
+      <Weather/>
       <div id="bg">
         <img src={background} alt="starry night sky"></img>
       </div>
@@ -45,8 +45,7 @@ export default function Dashboard() {
         className="container valign-wrapper"
       >
         <div className="row">
-          <section id="removeafterabit" class="animation-box">
-            <div className="fourth-text landing-copy col s12 center-align">
+            <div id="removeafterabit" className="fourth-text landing-copy col s12 center-align">
               <h4>
                 <b>Hey there,</b> {user.name.split(" ")[0]}
                 <p
@@ -57,14 +56,15 @@ export default function Dashboard() {
                 </p>
               </h4>
             </div>
-          </section>
 
-          <Newcomment />
+           {/* <Newcomment /> */}
           <History>
             <HistoryItem>
               {/* Comment History to go here at some point! */}
             </HistoryItem>
           </History>
+
+
         </div>
       </div>
 
