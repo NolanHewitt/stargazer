@@ -75,10 +75,9 @@ export default function getWeather() {
                         <h3 id="wind">Max. Temperature: °F</h3>
                         <h3 id="degree-section">Temperature: °F</h3>
                         <h3 id="humid">humidity</h3>
-                        <img id="weather-icon" src="" alt=""></img>
                         <h3 id="clouds">clouds</h3>
                         <h3 id="desc">desc</h3>
-                        {/* <img class="weather-image" src="" alt="" width="128" height="128" /> */}
+                        <img id="weather-icon" src="" alt=""></img>
                     <h3 className="weather-description"></h3>
 
          <button
