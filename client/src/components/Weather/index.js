@@ -6,6 +6,7 @@ export default function getWeather() {
 
     let latitude;
     let longitude;
+    const geoKey = "fbdd220a24d54902b3077b5c9d5494c6"
     const apiKey = "775daeace8183df662c1b6fca71df7b4";
     let URL;
     let location;
@@ -16,7 +17,7 @@ export default function getWeather() {
     let humid;
     let clouds;
 
-    $.getJSON('https://api.ipgeolocation.io/astronomy?apiKey=2e99e14a862c46a89e3bd1b5ba265340', function (data) {
+    $.getJSON(`https://api.ipgeolocation.io/astronomy?apiKey=${geoKey}`, function (data) {
         latitude = data.location.latitude;
         longitude = data.location.longitude;
         console.log(latitude);
@@ -26,7 +27,6 @@ export default function getWeather() {
     }).then(function (){
 
     $.getJSON(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`, function (data) {
-
         location = data.name;
         fahrenheit = data.main.temp;
         humid = data.main.humidity;
@@ -70,7 +70,7 @@ export default function getWeather() {
                     document.getElementById("weather-container").style.display = "block";
                 }}
                 className="emoji btn btn-large waves-effect waves-light hoverable blue accent-3">
-                {/* ⛈️ */}
+                 ⛈️ 
          </button>
 
             <div class="containerW" id="weather-container">

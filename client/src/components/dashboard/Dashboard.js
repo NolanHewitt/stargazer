@@ -37,7 +37,6 @@ export default function Dashboard() {
       {/* <Locator/> */}
       <Skywatch/>
       <Weather/>
-      <Compass/>
       <div id="bg">
         <img src={background} alt="starry night sky"></img>
       </div>

@@ -7,3 +7,11 @@ img {
     margin-top: 1%;
     z-index: 5;
 }
+
+#data{
+    font-size: 40px;
+    margin-top: 35%;
+    margin-left: 30%;
+    color: white;
+    position: absolute;
+}
