@@ -9,6 +9,7 @@ import Weather from "../Weather/index";
 import "./dashboard.css";
 import background from "../images/background.jpg";
 import Newcomment from "../Newcomment";
+import Compass from "../compass/compass"
 
 export default function Dashboard() {
   const { user, logoutUser } = useContext(AuthContext);
@@ -36,6 +37,7 @@ export default function Dashboard() {
       {/* <Locator/> */}
       <Skywatch/>
       <Weather/>
+      <Compass/>
       <div id="bg">
         <img src={background} alt="starry night sky"></img>
       </div>
