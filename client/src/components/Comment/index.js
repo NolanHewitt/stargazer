@@ -10,6 +10,7 @@ import "../Comment/Comment.css"
 function Comment(props) {
 
   const [comment, setComment] = useState("");
+  const [sight, setSight] = useState("");
   const [tone, setTone] = useState("");
 
 
@@ -27,17 +28,17 @@ function Comment(props) {
     event.preventDefault();
     console.log("posted a comment!")
     fetch("/api/comments/", {
-      method: "POST",
-      body: JSON.stringify({
-        text: comment
-      }),
-      headers: {
-        "Content-Type": "application/json"
+        method: "POST",
+        body: JSON.stringify({
+          text: comment,
+          sight: sight
+        }),
+        headers: {
+          "Content-Type": "application/json"
       }
-    }
-
-    )
+    })
   };
+
 
   return (
     <div id="commentsa" className="comments" style={{ "display": props.display }}>
