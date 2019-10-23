@@ -33,6 +33,9 @@ function Comment(props) {
   function postHandler(event) {
     event.preventDefault();
     console.log("posted a comment!")
+    console.log(sight);
+    console.log(comment);
+    
     fetch("/api/comments/", {
         method: "POST",
         body: JSON.stringify({
@@ -47,9 +50,9 @@ function Comment(props) {
 
 
   return (
-    <div id="commentsa" className="comments" value={sight} onChange={event => setSight(event.target.value)} style={{ "display": props.display }}>
+    <div id="commentsa" className="comments" style={{ "display": props.display }}>
       <form > What did you see?
-          <select name="sights">
+          <select name="sights"  value={sight} onChange={event => setSight(event.target.value)}>
           <option className="comment-options" value="nothing" >Nothing</option>
           <option value="shootingStar">Shooting Star</option>
           <option value="sattelite">Satellite</option>
