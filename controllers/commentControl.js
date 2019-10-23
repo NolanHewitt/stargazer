@@ -1,7 +1,6 @@
 const db = require("../models");
 
 module.exports = {
-
     // will return the seven most recent comments
     mostRecent: function (req, res) {
         console.log(req.user);
@@ -14,17 +13,29 @@ module.exports = {
             .then( dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
     },
-    create: function (req, res) {
+    findAll: function (req, res) {
         db.Comment
-            .create(req.body)
-            .then(function(dbComment) {
-// db.User.id = db.Comment.id?
-                return db.User.findOneAndUpdate({}, { $push: { comments: dbComment._id } }, { new: true });
-              })
+            .find(req.query)
             .then(dbModel => res.json(dbModel))
             .catch(err => res.status(422).json(err));
-            console.log(db.User.findOneAndUpdate({}).schema.paths.name.SchemaString);
-            console.log();
+    },
+    findById: function (req, res) {
+        db.Comment
+            .findById(req.params.id)
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
+    },
+    create: function (req, res) {
+        console.log("creating a comment");
+        console.log(req.body);
+        console.log(req.user);
+        
+        
+        
+        db.Comment
+            .create(req.body)
+            .then(dbModel => res.json(dbModel))
+            .catch(err => res.status(422).json(err));
     },
     remove: function (req, res) {
         db.Comment
