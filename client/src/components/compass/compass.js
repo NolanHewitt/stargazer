@@ -17,11 +17,13 @@ export default function() {
 window.addEventListener('deviceorientation', function(e) {
     console.log( e.webkitCompassHeading );
     angle = e.webkitCompassHeading;
+    document.getElementById("data").innerHTML = angle;
 }, false);
 
   return (
         <>
         <img id="compass" src={compass} alt="compass"></img>
+        <div id="data"></div>
         </>
   );
 }

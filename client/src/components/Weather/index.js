@@ -3,16 +3,11 @@ import $ from "jquery";
 import "./weather.css"
 
 export default function getWeather() {
-    const apiGeoKey = process.env.REACT_APP_GEO_API_KEY;
-    let latitude = 44;
-    let longitude = -93;
-    $.getJSON(`https://api.ipgeolocation.io/astronomy?apiKey=${apiGeoKey}`, function (data) {
-        latitude = data.location.latitude;
-        longitude = data.location.longitude;
-    })
 
-    const apiWeatherKey = process.env.REACT_APP_WEATHER_API_KEY;
-
+    let latitude;
+    let longitude;
+    const apiKey = "775daeace8183df662c1b6fca71df7b4";
+    let URL;
     let location;
     let icon;
     let fahrenheit;
@@ -21,8 +16,16 @@ export default function getWeather() {
     let humid;
     let clouds;
 
-    $.getJSON(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiWeatherKey}`, function (data) {
+    $.getJSON('https://api.ipgeolocation.io/astronomy?apiKey=2e99e14a862c46a89e3bd1b5ba265340', function (data) {
+        latitude = data.location.latitude;
+        longitude = data.location.longitude;
+        console.log(latitude);
+        console.log(longitude);
+        URL = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`;
+        console.log(URL);
+    }).then(function (){
 
+    $.getJSON(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`, function (data) {
         location = data.name;
         fahrenheit = data.main.temp;
         humid = data.main.humidity;
@@ -44,6 +47,7 @@ export default function getWeather() {
         document.getElementById("desc").innerHTML = "Weather: " + description;
         document.getElementById("weather-icon").setAttribute("src", imageIcon);
     });
+});
 
 
 
