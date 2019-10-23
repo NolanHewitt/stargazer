@@ -11,7 +11,7 @@ export default function() {
 
     window.addEventListener('deviceorientation', function(e) {
       setAngle(e.webkitCompassHeading);
-      console.log(Angle);
+      console.log(JSON.stringify(Angle));
   }, false);
 
     });
