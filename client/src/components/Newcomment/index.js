@@ -6,12 +6,12 @@ import "./Newcomment.css"
 
 class Newcomment extends React.Component {
 state= {
-    commentBoxOpen: false,
+    commentBoxOpen: true,
     commentBoxDisplay: "none"
 }
     handleClick() {
         this.setState({
-            commentBoxOpen: true,
+            commentBoxOpen: false,
             commentBoxDisplay: "block"
         }) 
     }

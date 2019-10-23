@@ -39,10 +39,9 @@ function Comment(props) {
     )
   };
 
-
-  return (
-    <div id="commentsa" className="comments" style={"display" + props.display}>
-      <form > What did you see?
+    return (
+      <div id="commentsa" className = "comments" style={{"display": props.display}}>
+        <form > What did you see?
           <select name="sights">
           <option className="comment-options" value="nothing" >Nothing</option>
           <option value="shootingStar">Shooting Star</option>

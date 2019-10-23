@@ -7,18 +7,15 @@ select {
     display: block;
 }
 .comments {
-    width: 20%;
+    width: 30%;
     padding: 2%;
     border: 7px solid black;
     background: rgb(9, 9, 95);
     color: goldenrod;
-    /* text-align: center; */
-    margin-left: 2.5%;
+    text-align: center;
     position: fixed;
-    right: 20px;
-    top: 150px;
-    
-    
+    margin-top: -50px;
+    margin-left: -60px;
 }
 #comment-box {
     height: 55px;
