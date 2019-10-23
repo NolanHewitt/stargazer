@@ -10,6 +10,8 @@ img {
 
 #data{
     font-size: 40px;
-    align-content: center;
+    margin-top: 35%;
+    margin-left: 30%;
     color: white;
+    position: absolute;
 }
