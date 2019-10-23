@@ -65,7 +65,7 @@ export default function getWeather() {
                     document.getElementById("weather-container").style.display = "block";
                 }}
                 className="emoji btn btn-large waves-effect waves-light hoverable blue accent-3">
-                ⛈️
+                {/* ⛈️ */}
          </button>
 
             <div class="containerW" id="weather-container">
