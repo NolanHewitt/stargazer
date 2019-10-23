@@ -14,11 +14,11 @@ export default function() {
       console.log(Angle);
   }, false);
 
-    setInterval(function(){
-        $('#compass').css('transform','rotate(' + Angle + 'deg)');
-     }, 20);
-
     });
+
+    setInterval(function(){
+      $('#compass').css('transform','rotate(' + Angle + 'deg)');
+   }, 20);
 
   return (
         <>
