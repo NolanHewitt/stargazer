@@ -10,6 +10,7 @@ import "../Comment/Comment.css"
 function Comment(props) {
 
   const [comment, setComment] = useState("");
+  const [sight, setSight] = useState("");
   const [tone, setTone] = useState("");
 
 
@@ -27,18 +28,30 @@ function Comment(props) {
     event.preventDefault();
     console.log("posted a comment!")
     fetch("/api/comments/", {
+<<<<<<< HEAD
       method: "POST",
       body: JSON.stringify({
         text: comment
       }),
       headers: {
         "Content-Type": "application/json"
+=======
+        method: "POST",
+        body: JSON.stringify({
+          text: comment,
+          sight: sight
+        }),
+        headers: {
+          "Content-Type": "application/json"
+>>>>>>> 1a11226edb769cecac2d0941f9f813a89d020f7d
       }
-    }
-
-    )
+    })
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 1a11226edb769cecac2d0941f9f813a89d020f7d
   return (
     <div id="commentsa" className="comments" style={{ "display": props.display }}>
       <form > What did you see?

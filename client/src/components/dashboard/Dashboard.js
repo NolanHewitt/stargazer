@@ -8,6 +8,8 @@ import Weather from "../Weather/index";
 import "./dashboard.css";
 import background from "../images/background.jpg";
 import Newcomment from "../Newcomment/Newcomment";
+import Modal from "../Newcomment/Modal.js"
+import Compass from "../compass/compass"
 
 export default function Dashboard() {
   const { user, logoutUser } = useContext(AuthContext);
