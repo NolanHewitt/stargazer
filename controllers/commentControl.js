@@ -1,4 +1,6 @@
 const db = require("../models");
+const ToneAnalyzerV3 = require('ibm-watson/tone-analyzer/v3');
+const { IamAuthenticator } = require('ibm-watson/auth');
 
 module.exports = {
 
@@ -15,6 +17,9 @@ module.exports = {
             .catch(err => res.status(422).json(err));
     },
     create: function (req, res) {
+
+
+
         db.Comment
             .create(req.body)
             .then(function(dbComment) {
