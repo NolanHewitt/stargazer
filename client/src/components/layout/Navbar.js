@@ -17,6 +17,8 @@ export default function() {
             className="col s5 brand-logo center white-text"//WORKING ON GETTING THIS TO SPARKLE!!
           >Star-Gazer
           </Link>
+
+          <Compass/>
         </div>
       </nav>
     </div>
