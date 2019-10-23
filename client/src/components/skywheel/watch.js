@@ -38,7 +38,7 @@ export default function() {
     let suns
     let sunr
   
-    $.getJSON('https://api.ipgeolocation.io/astronomy?apiKey=66fe5911bbf64c2b80e935b0c3a77a0e', function (data) {
+    $.getJSON('https://api.ipgeolocation.io/astronomy?apiKey=2e99e14a862c46a89e3bd1b5ba265340', function (data) {
       console.log(data)
       sunrise = data.sunrise
       sunset = data.sunset

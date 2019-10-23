@@ -19,7 +19,8 @@ const commentSchema = new Schema({
   tone: {
     type: String,
     required: true
-  }
+  },
+  
 
 });
 

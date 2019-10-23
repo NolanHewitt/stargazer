@@ -6,7 +6,7 @@ const passport = require("passport");
 const users = require("./routes/api/users");
 const comments = require("./routes/api/comments");
 require('dotenv').config();
-console.log(process.env)
+
 const app = express();
 
 // Bodyparser middleware
@@ -16,7 +16,9 @@ app.use(
   })
 );
 app.use(bodyParser.json());
-
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 // DB Config
 const db = require("./config/keys").mongoURI;
 
@@ -38,6 +40,10 @@ require("./config/passport")(passport);
 // Routes
 app.use("/api/users", users);
 app.use("/api/comments", comments);
+app.use("*", (req, res) =>
+ res.sendFile(path.join(__dirname, "../client/build/index.html"))
+);
+
 
 const port = process.env.PORT || 5000;
 

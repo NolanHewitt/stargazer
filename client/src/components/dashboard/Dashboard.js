@@ -4,12 +4,10 @@ import PropTypes from "prop-types";
 import Skywatch from "../skywheel/watch";
 import { History, HistoryItem } from "../userHistory";
 import { AuthContext } from "../../auth/auth";
-import Comment from "../Comment/index";
 import Weather from "../Weather/index";
 import "./dashboard.css";
 import background from "../images/background.jpg";
 import Newcomment from "../Newcomment/Newcomment";
-import Modal from "../Newcomment/Modal.js"
 
 export default function Dashboard() {
   const { user, logoutUser } = useContext(AuthContext);
