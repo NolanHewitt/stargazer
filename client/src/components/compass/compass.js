@@ -1,24 +1,20 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import $ from 'jquery';
 import compass from './images/compass.png'
 import './compass.css'
 
 export default function() {
 
-  const [Angle, setAngle] = useState(0);
-
-  useEffect(() => {
-
-    window.addEventListener('deviceorientation', function(e) {
-      setAngle(e.webkitCompassHeading);
-      console.log(JSON.stringify(Angle));
-  }, false);
-
-    });
+    var angle = 0;
 
     setInterval(function(){
-      $('#compass').css('transform','rotate(' + Angle + 'deg)');
-   }, 20);
+        $('#compass').css('transform','rotate(' + angle + 'deg)');
+     }, 17);
+
+window.addEventListener('deviceorientation', function(e) {
+    console.log( e.webkitCompassHeading );
+    angle = e.webkitCompassHeading;
+}, false);
 
   return (
         <>
