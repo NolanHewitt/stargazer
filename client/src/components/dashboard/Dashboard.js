@@ -8,7 +8,8 @@ import Comment from "../Comment/index";
 import Weather from "../Weather/index";
 import "./dashboard.css";
 import background from "../images/background.jpg";
-import Newcomment from "../Newcomment";
+import Newcomment from "../Newcomment/Newcomment";
+import Modal from "../Newcomment/Modal.js"
 
 export default function Dashboard() {
   const { user, logoutUser } = useContext(AuthContext);
@@ -56,9 +57,7 @@ export default function Dashboard() {
                 </p>
               </h4>
             </div>
-
-           <Newcomment />
-           <Comment/>
+          <Newcomment />
           <History>
             <HistoryItem>
               {/* Comment History to go here at some point! */}

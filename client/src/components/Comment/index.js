@@ -6,6 +6,7 @@ import { PromiseProvider } from "mongoose";
 function Comment(props) {
 
   const [comment, setComment] = useState("");
+  const [sight, setSight] = useState("");
 
 
   function postHandler(event) {
@@ -14,7 +15,8 @@ function Comment(props) {
     fetch("/api/comments/", {
         method: "POST",
         body: JSON.stringify({
-          text: comment
+          text: comment,
+          sight: sight
         }),
         headers: {
           "Content-Type": "application/json"
@@ -26,9 +28,9 @@ function Comment(props) {
   
 
     return (
-      <div id="commentsa" className = "comments" style={{"display": props.display}}>
+      <div id="commentsa" className = "comment-post" style={{"display": props.display}}>
         <form > What did you see?
-          <select name="sights">
+          <select value = {sight} onChange = {event => setSight (event.target.value)}  name="sights">
             <option className="comment-options" value="nothing" >Nothing</option>
             <option value="shootingStar">Shooting Star</option>
             <option value="sattelite">Satellite</option>

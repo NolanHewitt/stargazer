@@ -67,9 +67,9 @@
 
 #commentsa {
   color: white;
-  animation-name: fadeOutin;
+  /* animation-name: fadeOutin;
   animation-delay: 0s;
-  animation-duration: 10.5s;
+  animation-duration: 10.5s; */
 }
 
 #removeafterabit{
