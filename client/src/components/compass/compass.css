@@ -7,3 +7,9 @@ img {
     margin-top: 1%;
     z-index: 5;
 }
+
+#data{
+    font-size: 40px;
+    align-content: center;
+    color: white;
+}
