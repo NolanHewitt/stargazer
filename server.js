@@ -6,7 +6,7 @@ const passport = require("passport");
 const users = require("./routes/api/users");
 const comments = require("./routes/api/comments");
 require('dotenv').config();
-console.log(process.env)
+
 const app = express();
 
 // Bodyparser middleware

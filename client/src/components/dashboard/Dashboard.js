@@ -4,11 +4,11 @@ import PropTypes from "prop-types";
 import Skywatch from "../skywheel/watch";
 import { History, HistoryItem } from "../userHistory";
 import { AuthContext } from "../../auth/auth";
-//import Comment from "../Comment/index";
+import Comment from "../Comment/index";
 import Weather from "../Weather/index";
 import "./dashboard.css";
 import background from "../images/background.jpg";
-import Newcomment from "../Newcomment/index.js";
+// import Comment from "../Comment/index.js";
 
 export default function Dashboard() {
   const { user, logoutUser } = useContext(AuthContext);
@@ -57,7 +57,7 @@ export default function Dashboard() {
               </h4>
             </div>
 
-           {/* <Newcomment /> */}
+           <Comment />
           <History>
             <HistoryItem>
               {/* Comment History to go here at some point! */}
