@@ -19,6 +19,10 @@ const commentSchema = new Schema({
   tone: {
     type: String,
     required: true
+  },
+  sight: {
+    type: String,
+    required: true
   }
 
 });
