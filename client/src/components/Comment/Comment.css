@@ -6,16 +6,15 @@ select {
 #commentsa {
     display: block;
 }
-.comments {
-    width: 30%;
+.comment-post {
+    width: 50%;
     padding: 2%;
     border: 7px solid black;
     background: rgb(9, 9, 95);
     color: goldenrod;
     text-align: center;
     position: fixed;
-    margin-top: -50px;
-    margin-left: -60px;
+    margin: auto;
 }
 #comment-box {
     height: 55px;
@@ -26,8 +25,7 @@ option {
 }
 button {
     background: black;
-    border-radius: 10px;
-    font-size: 25px;
-    color: goldenrod;
-
+    color: white;
+    border: 1px black;
+    border-radius: 2px black;
 }
