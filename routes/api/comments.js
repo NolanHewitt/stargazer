@@ -25,22 +25,7 @@ router.get("/recent", controller.mostRecent);
 router.post("/", controller.create);
 
 //Watson POST
-router.post("/evaluate", function (req, res) {
-  console.log("evaluate request" + req)
-  const toneParams = {
-    toneInput: { 'text': req.body.comment },
-    contentType: 'application/json',
-  };
-
-  toneAnalyzer.tone(toneParams)
-    .then(toneAnalysis => {
-      console.log(JSON.stringify(toneAnalysis, null, 2));
-      res.json(toneAnalysis);
-    })
-    .catch(err => {
-      console.log('error:', err);
-    });
-})
+router.post("/evaluate", controller.evaluate);
 
 router.get("/my-comments/:userId", (req, res) => {
   console.log("happy => ", req.params.userId);
