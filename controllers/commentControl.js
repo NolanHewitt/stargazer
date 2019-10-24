@@ -6,7 +6,6 @@ module.exports = {
 
     // will return the seven most recent comments
     mostRecent: function (req, res) {
-        console.log(req.user);
         db.Comment
             .find({})
             .sort({
@@ -75,6 +74,31 @@ module.exports = {
           });
 
     },
+    evaluate: function (req, res) {
+
+        const toneAnalyzer = new ToneAnalyzerV3({
+            version: '2017-09-21',
+            authenticator: new IamAuthenticator({
+              apikey: 'Pfsyl8Ttq6wGDbcPtS0KuLXNQqb4IhdnLPyAuW57Xmcl',
+            }),
+            url: 'https://gateway.watsonplatform.net/tone-analyzer/api',
+          });
+
+        console.log("evaluate request" + req)
+        const toneParams = {
+          toneInput: { 'text': req.body.comment },
+          contentType: 'application/json',
+        };
+      
+        toneAnalyzer.tone(toneParams)
+          .then(toneAnalysis => {
+            console.log(JSON.stringify(toneAnalysis, null, 2));
+            res.json(toneAnalysis);
+          })
+          .catch(err => {
+            console.log('error:', err);
+          });
+      },
 
     remove: function (req, res) {
         db.Comment
