@@ -21,13 +21,10 @@ function Comment(props) {
 
   function evaluateHandler(event) {
     event.preventDefault();
-    console.log("evaluated tone");
     $.post("/api/comments/evaluate", { comment: comment }, function (response) {
-      console.log(response.result.document_tone.tones);
       setTones(response.result.document_tone.tones);
     })
       .catch(err => {
-        console.log('error:', err);
       });
   }
 
@@ -35,9 +32,6 @@ function Comment(props) {
 
   function postHandler(event) {
     event.preventDefault();
-    console.log("posted a comment!")
-    console.log(sight);
-    console.log(comment);
     
     fetch("/api/comments/", {
         method: "POST",
@@ -50,6 +44,7 @@ function Comment(props) {
       }
     })
   };
+
 
 
   return (
@@ -71,8 +66,8 @@ function Comment(props) {
             <span>{tone.tone_name}</span>
           ))
         }</div>
-        <button id="commentBtn" onClick={postHandler}>Post</button>
-        <button id="evaluateBtn" onClick={evaluateHandler}>Evaluate</button>
+        <button className="button" id="commentBtn" onClick={postHandler}>Post</button> {" "}
+        <button className="button" id="evaluateBtn" onClick={evaluateHandler}>Evaluate</button>
       </form>
     </div>
   );

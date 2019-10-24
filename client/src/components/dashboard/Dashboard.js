@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import PropTypes from "prop-types";
 // import Locator from '../locator/locator'
 import Skywatch from "../skywheel/watch";
@@ -11,9 +11,11 @@ import background from "../images/background.jpg";
 import Newcomment from "../Newcomment/Newcomment";
 import Modal from "../Newcomment/Modal.js"
 import Compass from "../compass/compass"
+import Comments from "../getcomments/index"
 
 export default function Dashboard() {
   const { user, logoutUser } = useContext(AuthContext);
+  const [ comments, setComments ] = useState([]);
 
   function remover() {
     setTimeout(function() {
@@ -26,9 +28,13 @@ export default function Dashboard() {
   function addweather() {
     setTimeout(function() {
       document.getElementById("emojid").style.display = "block";
+      document.getElementById("newcomment").style.display = "block";
+      document.getElementById("commentb").style.display = "block";
     }, 5600);
   }
   addweather();
+
+  
 
   return (
     <>
@@ -41,7 +47,7 @@ export default function Dashboard() {
       <div id="bg">
         <img src={background} alt="starry night sky"></img>
       </div>
-
+    <Newcomment/>
       <div
         style={{ height: "75vh", color: "white" }}
         className="container valign-wrapper"
@@ -58,13 +64,13 @@ export default function Dashboard() {
                 </p>
               </h4>
             </div>
-          <Newcomment />
           <History>
             <HistoryItem>
-              {/* Comment History to go here at some point! */}
+            <Comments/>
             </HistoryItem>
           </History>
 
+          
 
         </div>
       </div>
@@ -74,7 +80,7 @@ export default function Dashboard() {
           width: "85px",
           position: "absolute",
           marginLeft: "75%",
-          marginTop: "-15%"
+          marginTop: "15%"
         }}
         onClick={e => {
           e.preventDefault();

@@ -22,14 +22,12 @@ export default function() {
        
 
       var CurrentDate = moment().format('HH:mm');
-      console.log(CurrentDate);
   
       let dateSplit;
       dateSplit = CurrentDate.split(':');
       let dateHtom;
       dateHtom = dateSplit[0] * 60
       minstoday = dateHtom + parseInt(dateSplit[1]);
-      console.log(minstoday + " mins have passed today.");
   
       //-----------------------------------------------------------------
   
@@ -39,7 +37,7 @@ export default function() {
     let sunr
   
     $.getJSON('https://api.ipgeolocation.io/astronomy?apiKey=2e99e14a862c46a89e3bd1b5ba265340', function (data) {
-      console.log(data)
+      
       sunrise = data.sunrise
       sunset = data.sunset
   
@@ -50,21 +48,16 @@ export default function() {
       let sunrHtom = parseInt(sunr[0] * 60)
       let sunrMin = parseInt(sunr[1])
       let sunriseT = sunrHtom + sunrMin;
-      console.log("The sun rises at " + sunriseT + " mins after midnight.");
   
       let sunsHtom = parseInt(suns[0] * 60)
       let sunsMin = parseInt(suns[1])
       let sunsetT = sunsHtom + sunsMin;
-      console.log("The sun sets at " + sunsetT + " mins after midnight.");
   
       let suntime = sunsetT - sunriseT;
-      console.log("The sun will be out for " + suntime + " mins today");
   
       let time = minstoday - sunriseT;
-    console.log(time + " mins passed since sunrise");
     percentage = ((time/suntime) * 100)
     percentFinal = (((23/20)*percentage)-15)
-    console.log(percentFinal);
   
     //Time from sunset to midnight
     nightTime = 1440 - sunsetT;
@@ -84,7 +77,6 @@ export default function() {
   
     percentageM = ((moontime/moont) * 100)
     percentFinalM = (((23/20)*percentageM)-15)
-    console.log(percentFinalM);
   
     });
   
@@ -104,14 +96,13 @@ myFunction2();
        
 
       var CurrentDate = moment().format('HH:mm');
-      console.log(CurrentDate);
+      
   
       let dateSplit;
       dateSplit = CurrentDate.split(':');
       let dateHtom;
       dateHtom = dateSplit[0] * 60
       minstoday = dateHtom + parseInt(dateSplit[1]);
-      console.log(minstoday + " mins have passed today.");
   
       //-----------------------------------------------------------------
   
@@ -121,7 +112,6 @@ myFunction2();
     let sunr
   
     $.getJSON('https://api.ipgeolocation.io/astronomy?apiKey=66fe5911bbf64c2b80e935b0c3a77a0e', function (data) {
-      console.log(data)
       sunrise = data.sunrise
       sunset = data.sunset
   
@@ -132,21 +122,16 @@ myFunction2();
       let sunrHtom = parseInt(sunr[0] * 60)
       let sunrMin = parseInt(sunr[1])
       let sunriseT = sunrHtom + sunrMin;
-      console.log("The sun rises at " + sunriseT + " mins after midnight.");
   
       let sunsHtom = parseInt(suns[0] * 60)
       let sunsMin = parseInt(suns[1])
       let sunsetT = sunsHtom + sunsMin;
-      console.log("The sun sets at " + sunsetT + " mins after midnight.");
   
       let suntime = sunsetT - sunriseT;
-      console.log("The sun will be out for " + suntime + " mins today");
   
       let time = minstoday - sunriseT;
-    console.log(time + " mins passed since sunrise");
     percentage = ((time/suntime) * 100)
     percentFinal = (((23/20)*percentage)-15)
-    console.log(percentFinal);
   
     //Time from sunset to midnight
     nightTime = 1440 - sunsetT;
@@ -166,7 +151,6 @@ myFunction2();
   
     percentageM = ((moontime/moont) * 100)
     percentFinalM = (((23/20)*percentageM)-15)
-    console.log(percentFinalM);
   
     });
   
@@ -184,14 +168,12 @@ myFunction3();
     setInterval(function(){
 
   var CurrentDate = moment().format('HH:mm');
-    console.log(CurrentDate);
 
     let dateSplit;
     dateSplit = CurrentDate.split(':');
     let dateHtom;
     dateHtom = dateSplit[0] * 60
     minstoday = dateHtom + parseInt(dateSplit[1]);
-    console.log(minstoday + " mins have passed today.");
 
     //-----------------------------------------------------------------
 
@@ -201,7 +183,6 @@ myFunction3();
   let sunr
 
   $.getJSON('https://api.ipgeolocation.io/astronomy?apiKey=66fe5911bbf64c2b80e935b0c3a77a0e', function (data) {
-    console.log(data)
     sunrise = data.sunrise
     sunset = data.sunset
 
@@ -212,21 +193,16 @@ myFunction3();
     let sunrHtom = parseInt(sunr[0] * 60)
     let sunrMin = parseInt(sunr[1])
     let sunriseT = sunrHtom + sunrMin;
-    console.log("The sun rises at " + sunriseT + " mins after midnight.");
 
     let sunsHtom = parseInt(suns[0] * 60)
     let sunsMin = parseInt(suns[1])
     let sunsetT = sunsHtom + sunsMin;
-    console.log("The sun sets at " + sunsetT + " mins after midnight.");
 
     let suntime = sunsetT - sunriseT;
-    console.log("The sun will be out for " + suntime + " mins today");
 
     let time = minstoday - sunriseT;
-  console.log(time + " mins passed since sunrise");
   percentage = ((time/suntime) * 100)
   percentFinal = (((23/20)*percentage)-15)
-  console.log(percentFinal);
 
   //Time from sunset to midnight
   nightTime = 1440 - sunsetT;
@@ -246,7 +222,6 @@ myFunction3();
 
   percentageM = ((moontime/moont) * 100)
   percentFinalM = (((23/20)*percentageM)-15)
-  console.log(percentFinalM);
 
   });
 
