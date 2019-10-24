@@ -1,5 +1,4 @@
-import React, {component} from "react";
-import Comment from "../Comment/index.js";
+import React from "react";
 import "./Newcomment.css";
 import Modal from './Modal.js'
 

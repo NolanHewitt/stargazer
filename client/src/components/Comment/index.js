@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import $ from "jquery";
-// import ToneAnalyzerV3 from 'ibm-watson/tone-analyzer/v3';
-// import { IamAuthenticator } from 'ibm-watson/auth';
+
+import './Comment.css';
+import ToneAnalyzerV3 from 'ibm-watson/tone-analyzer/v3';
+import { IamAuthenticator } from 'ibm-watson/auth';
+
 
 
 import "../Comment/Comment.css"
