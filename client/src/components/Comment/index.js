@@ -51,12 +51,12 @@ function Comment(props) {
     <div id="commentsa" className="comments" style={{ "display": props.display }}>
       <form > What did you see?
           <select name="sights"  value={sight} onChange={event => setSight(event.target.value)}>
-          <option className="comment-options" value="nothing" >Nothing</option>
-          <option value="shootingStar">Shooting Star</option>
-          <option value="sattelite">Satellite</option>
-          <option value="plane">Plane</option>
-          <option value="ufo">UFO</option>
-          <option value="other">Other</option>
+          <option className="comment-options" value="Nothing" >Nothing</option>
+          <option value="Shooting Star">Shooting Star</option>
+          <option value="Sattelite">Satellite</option>
+          <option value="Plane">Plane</option>
+          <option value="FO">UFO</option>
+          <option value="Other">Other</option>
         </select>
         <br />
         <textarea id="comment-box" value={comment} onChange={event => setComment(event.target.value)} rows="4">Comment</textarea>
