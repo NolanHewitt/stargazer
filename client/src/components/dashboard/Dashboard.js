@@ -27,10 +27,11 @@ export default function Dashboard() {
   function addweather() {
     setTimeout(function() {
       document.getElementById("emojid").style.display = "block";
+      document.getElementById("emojid").style.marginTop = "140%";
       document.getElementById("newcomment").style.display = "block";
       document.getElementById("centered-toggle-button").style.display = "block";
       document.getElementById("commentb").style.display = "block";
-      document.getElementById("loggingout").style.marginTop = "-0.0000001%";
+      document.getElementById("loggingout").style.marginTop = "-18.5%";
     }, 5600);
   }
   addweather();
@@ -44,14 +45,19 @@ export default function Dashboard() {
       </div>
       {/* <Locator/> */}
       <Skywatch/>
+      <hr></hr>
       <Weather/>
       <div id="bg">
         <img src={background} alt="starry night sky"></img>
       </div>
+<br></br>
+<br></br>
+<br></br>
+<hr style={{marginTop:"-4%"}}></hr>
 
       <div id="userhistory" style={{background: "white",
     display:"none"}}>Text</div>
-      
+
     <Newcomment/>
       <div
         style={{ height: "75vh", color: "white" }}
@@ -69,13 +75,11 @@ export default function Dashboard() {
                 </p>
               </h4>
             </div>
-          <History>
-            <HistoryItem>
+          {/* <History>
+            <HistoryItem> */}
             <Comments/>
-            </HistoryItem>
-          </History>
-
-          
+            {/* </HistoryItem>
+          </History> */}
 
         </div>
       </div>
@@ -85,7 +89,7 @@ export default function Dashboard() {
           width: "85px",
           position: "absolute",
           marginLeft: "75%",
-          marginTop: "15%",
+          marginTop: "-5%",
         }}
         onClick={e => {
           e.preventDefault();

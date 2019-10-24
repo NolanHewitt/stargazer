@@ -81,11 +81,11 @@
 }
 
 #commentb {
-  font-size: 80%;
+  font-size: 75%;
   display: none;
   margin-top: 100%;
   text-align: center;
   animation-name: fadeInOut;
   animation-delay: 0s;
-  animation-duration: 5s;
+  animation-duration: 2s;
 }

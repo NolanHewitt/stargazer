@@ -59,7 +59,15 @@ function Comment(props) {
           <option value="Other">Other</option>
         </select>
         <br />
-        <textarea id="comment-box" value={comment} onChange={event => setComment(event.target.value)} rows="4">Comment</textarea>
+        <textarea id="comment-box" value={comment} onChange={event => {
+          if (comment.length < 50){
+          setComment(
+          event.target.value)
+          }
+          else {
+            setComment(comment.substring(0,49))
+          }
+          }} rows="4">Comment</textarea>
         <div id="tone-header">Comment Tone</div>
         <div id="tone-box">{
           tones.map((tone) => (
