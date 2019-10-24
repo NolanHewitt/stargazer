@@ -1,3 +1,4 @@
+
 .toggle-button {
   background-color: rgb(41, 121, 255);  
   color: white;
@@ -10,3 +11,12 @@
 .toggle-button:hover {
   background-color: rgb(13, 13, 99);
 }
+
+.newcomment {
+  position: fixed;
+  top: 80px;
+  display: none;
+  background-color: white;
+  border: 2px black;
+}
+
