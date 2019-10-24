@@ -91,9 +91,7 @@ module.exports = {
             console.log('error:', err);
           });
       },
-    userComments: function (req, res) {
-        
-    },
+
     remove: function (req, res) {
         db.Comment
             .findById({
