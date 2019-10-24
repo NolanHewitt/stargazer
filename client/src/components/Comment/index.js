@@ -63,7 +63,7 @@ function Comment(props) {
         <div id="tone-header">Comment Tone</div>
         <div id="tone-box">{
           tones.map((tone) => (
-            <span>{tone.tone_name}</span>
+            <span>{tone.tone_name + " "}</span>
           ))
         }</div>
         <button className="button" id="commentBtn" onClick={postHandler}>Post</button> {" "}
