@@ -42,7 +42,7 @@ function Comment(props) {
 
 
   return (
-    <div id="commentsa" className="comments" value={sight} onChange={event => setSight(event.target.value)} style={{ "display": props.display }}>
+    <div className="comment-post" value={sight} onChange={event => setSight(event.target.value)} style={{ "display": props.display }}>
       <form > What did you see?
           <select name="sights">
           <option className="comment-options" value="nothing" >Nothing</option>
@@ -54,8 +54,8 @@ function Comment(props) {
         </select>
         <br />
         <textarea id="comment-box" value={comment} onChange={event => setComment(event.target.value)} rows="4">Comment</textarea>
-        <button id="commentBtn" onClick={postHandler}>Post</button>
-        <button id="evaluateBtn" onClick={evaluateHandler}>Evaluate</button>
+        <button className = "button" id="commentBtn" onClick={postHandler}>Post</button> {" "}
+        <button className = "button" id="evaluateBtn" onClick={evaluateHandler}>Evaluate</button>
       </form>
     </div>
   );
