@@ -17,8 +17,6 @@ class Newcomment extends React.Component {
   render() {
     return (
 
-        <div >
-
         <div id="newcomment" className = "newcomment">
 
         <button

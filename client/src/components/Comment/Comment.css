@@ -9,7 +9,7 @@ select {
     padding: 2%;
     color: goldenrod;
     text-align: center;
-    margin:auto;
+    margin: auto;
     margin-top: 20%;
 }
 #comment-box {
@@ -27,4 +27,14 @@ option {
 }
 .button:hover {
     background-color: rgb(13, 13, 99);
+}
+#commentsa {
+    margin-top: 2.5%;
+    position: absolute;
+    width: 100%;
+    background-color: black;
+        color: white;
+        font-weight: bolder;
+        border: 2px black;
+        padding: 10px;
 }

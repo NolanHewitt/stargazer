@@ -19,6 +19,6 @@ console.log(newstuff);
 
 
   return (
-    <div id="commentb" >{comments}</div>
+    <div id="commentb" style={{marginTop:"0%"}} >{comments}</div>
   );
 }

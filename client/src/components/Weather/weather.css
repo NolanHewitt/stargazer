@@ -9,8 +9,8 @@
     border: 4px dotted greenyellow;
     background: black;
     width: 80%;
-    margin-top: 22%;
-    margin-left: 22.5%;
+    margin-top: 10%;
+    margin-left: 58.5%;
     text-align: center;
 }
 
@@ -25,4 +25,7 @@ h2 {
 .emoji {
     font-size: 200%;
     display: none;
+    animation-name: fadeInOut;
+  animation-delay: 0s;
+  animation-duration: 5s;
 }

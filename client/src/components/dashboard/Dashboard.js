@@ -15,7 +15,6 @@ import Comments from "../getcomments/index"
 
 export default function Dashboard() {
   const { user, logoutUser } = useContext(AuthContext);
-  const [ comments, setComments ] = useState([]);
 
   function remover() {
     setTimeout(function() {
@@ -29,7 +28,9 @@ export default function Dashboard() {
     setTimeout(function() {
       document.getElementById("emojid").style.display = "block";
       document.getElementById("newcomment").style.display = "block";
+      document.getElementById("centered-toggle-button").style.display = "block";
       document.getElementById("commentb").style.display = "block";
+      document.getElementById("loggingout").style.marginTop = "-0.0000001%";
     }, 5600);
   }
   addweather();
@@ -47,6 +48,10 @@ export default function Dashboard() {
       <div id="bg">
         <img src={background} alt="starry night sky"></img>
       </div>
+
+      <div id="userhistory" style={{background: "white",
+    display:"none"}}>Text</div>
+      
     <Newcomment/>
       <div
         style={{ height: "75vh", color: "white" }}
@@ -80,13 +85,14 @@ export default function Dashboard() {
           width: "85px",
           position: "absolute",
           marginLeft: "75%",
-          marginTop: "15%"
+          marginTop: "15%",
         }}
         onClick={e => {
           e.preventDefault();
           logoutUser();
         }}
         className="btn waves-effect waves-light hoverable blue accent-3"
+        id="loggingout"
       >
         Logout
       </button>

@@ -1,5 +1,5 @@
 
-.toggle-button {
+#centered-toggle-button {
   background-color: rgb(41, 121, 255);  
   color: white;
   padding: 10px;
@@ -7,16 +7,23 @@
   margin-left: 60%;
   margin-top: 20px;
   border: 2px;
+  display: none;
+  animation-name: fadeInOut;
+  animation-delay: 0s;
+  animation-duration: 5s;
 }
-.toggle-button:hover {
+#centered-toggle-button:hover {
   background-color: rgb(13, 13, 99);
 }
 
-.newcomment {
+/* .newcomment {
   position: fixed;
   top: 80px;
   display: none;
-  background-color: white;
+  background-color: black;
+  color: white;
+  font-weight: bolder;
   border: 2px black;
-}
+  padding: 10px;
+} */
 
