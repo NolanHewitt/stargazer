@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import $ from "jquery";
+
 import './Comment.css';
 import ToneAnalyzerV3 from 'ibm-watson/tone-analyzer/v3';
 import { IamAuthenticator } from 'ibm-watson/auth';
+
 
 
 import "../Comment/Comment.css"
@@ -13,21 +15,30 @@ function Comment(props) {
   const [comment, setComment] = useState("");
   const [sight, setSight] = useState("");
   const [tone, setTone] = useState("");
+  const [tones, setTones] = useState([]);
 
 
-  
+
   function evaluateHandler(event) {
     event.preventDefault();
     console.log("evaluated tone");
-    $.post("/api/comments/evaluate", {comment: comment}, function(response) {
-      console.log(response);
+    $.post("/api/comments/evaluate", { comment: comment }, function (response) {
+      console.log(response.result.document_tone.tones);
+      setTones(response.result.document_tone.tones);
     })
+      .catch(err => {
+        console.log('error:', err);
+      });
   }
+
 
 
   function postHandler(event) {
     event.preventDefault();
     console.log("posted a comment!")
+    console.log(sight);
+    console.log(comment);
+    
     fetch("/api/comments/", {
         method: "POST",
         body: JSON.stringify({
@@ -42,9 +53,9 @@ function Comment(props) {
 
 
   return (
-    <div id="commentsa" className="comments" value={sight} onChange={event => setSight(event.target.value)} style={{ "display": props.display }}>
+    <div id="commentsa" className="comments" style={{ "display": props.display }}>
       <form > What did you see?
-          <select name="sights">
+          <select name="sights"  value={sight} onChange={event => setSight(event.target.value)}>
           <option className="comment-options" value="nothing" >Nothing</option>
           <option value="shootingStar">Shooting Star</option>
           <option value="sattelite">Satellite</option>
@@ -54,6 +65,12 @@ function Comment(props) {
         </select>
         <br />
         <textarea id="comment-box" value={comment} onChange={event => setComment(event.target.value)} rows="4">Comment</textarea>
+        <div id="tone-header">Comment Tone</div>
+        <div id="tone-box">{
+          tones.map((tone) => (
+            <span>{tone.tone_name}</span>
+          ))
+        }</div>
         <button id="commentBtn" onClick={postHandler}>Post</button>
         <button id="evaluateBtn" onClick={evaluateHandler}>Evaluate</button>
       </form>
