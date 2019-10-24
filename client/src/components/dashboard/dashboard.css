@@ -79,3 +79,10 @@
   overflow: hidden;
   position: relative;
 }
+
+#commentb {
+  font-size: 80%;
+  display: none;
+  margin-top: 100%;
+  text-align: center;
+}

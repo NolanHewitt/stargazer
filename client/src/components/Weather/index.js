@@ -20,10 +20,7 @@ export default function getWeather() {
     $.getJSON(`https://api.ipgeolocation.io/astronomy?apiKey=${geoKey}`, function (data) {
         latitude = data.location.latitude;
         longitude = data.location.longitude;
-        console.log(latitude);
-        console.log(longitude);
         URL = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`;
-        console.log(URL);
     }).then(function (){
 
     $.getJSON(`http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${apiKey}`, function (data) {
@@ -36,7 +33,6 @@ export default function getWeather() {
         clouds = data.clouds.all;
 
     }).then(function (data) {
-        console.log(data);
         let imageIcon = "http://openweathermap.org/img/wn/"+ icon +"@2x.png"
         // //set dom elements from API
 
