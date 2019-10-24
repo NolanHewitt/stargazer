@@ -75,6 +75,7 @@ module.exports = {
           });
 
     },
+
     remove: function (req, res) {
         db.Comment
             .findById({

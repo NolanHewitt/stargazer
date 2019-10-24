@@ -45,7 +45,7 @@
   }
 
   45% {
-    opacity: 0;
+    opacity: 0.5;
   }
 
   100% {
@@ -85,4 +85,7 @@
   display: none;
   margin-top: 100%;
   text-align: center;
+  animation-name: fadeInOut;
+  animation-delay: 0s;
+  animation-duration: 5s;
 }
