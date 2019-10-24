@@ -71,9 +71,9 @@ export default function Dashboard() {
       <button
         style={{
           width: "85px",
-          position: "fixed",
+          position: "absolute",
           marginLeft: "75%",
-          marginTop: "15%"
+          marginTop: "-15%"
         }}
         onClick={e => {
           e.preventDefault();
