@@ -47,7 +47,7 @@ export default function Dashboard() {
       <div id="bg">
         <img src={background} alt="starry night sky"></img>
       </div>
-
+    <Newcomment/>
       <div
         style={{ height: "75vh", color: "white" }}
         className="container valign-wrapper"
@@ -64,7 +64,6 @@ export default function Dashboard() {
                 </p>
               </h4>
             </div>
-          <Newcomment />
           <History>
             <HistoryItem>
             <Comments/>
