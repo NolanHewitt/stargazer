@@ -16,7 +16,11 @@ class Newcomment extends React.Component {
 
   render() {
     return (
+
+        <div >
+
         <div id="newcomment" className = "newcomment">
+
         <button
           class="toggle-button"
           id="centered-toggle-button"
@@ -25,12 +29,11 @@ class Newcomment extends React.Component {
             this.showModal(e);
           }}
         >
+          {"Post a Comment"}
           {" "}
-          Post a Comment{" "}
         </button>
 
-        <Modal onClose={this.showModal} show={this.state.show}>
-        </Modal>
+        <Modal onClose={this.showModal} show={this.state.show} />
       </div>
     );
   }

@@ -66,8 +66,8 @@ function Comment(props) {
             <span>{tone.tone_name}</span>
           ))
         }</div>
-        <button id="commentBtn" onClick={postHandler}>Post</button>
-        <button id="evaluateBtn" onClick={evaluateHandler}>Evaluate</button>
+        <button className="button" id="commentBtn" onClick={postHandler}>Post</button> {" "}
+        <button className="button" id="evaluateBtn" onClick={evaluateHandler}>Evaluate</button>
       </form>
     </div>
   );
