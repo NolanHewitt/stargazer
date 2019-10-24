@@ -75,6 +75,25 @@ module.exports = {
           });
 
     },
+    evaluate: function (req, res) {
+        console.log("evaluate request" + req)
+        const toneParams = {
+          toneInput: { 'text': req.body.comment },
+          contentType: 'application/json',
+        };
+      
+        toneAnalyzer.tone(toneParams)
+          .then(toneAnalysis => {
+            console.log(JSON.stringify(toneAnalysis, null, 2));
+            res.json(toneAnalysis);
+          })
+          .catch(err => {
+            console.log('error:', err);
+          });
+      },
+    userComments: function (req, res) {
+        
+    },
     remove: function (req, res) {
         db.Comment
             .findById({
