@@ -8,9 +8,9 @@
   margin-top: 20px;
   border: 2px;
   display: none;
-  animation-name: fadeInOut;
+  animation-name: fadeOutin;
   animation-delay: 0s;
-  animation-duration: 5s;
+  animation-duration: 2s;
 }
 #centered-toggle-button:hover {
   background-color: rgb(13, 13, 99);
