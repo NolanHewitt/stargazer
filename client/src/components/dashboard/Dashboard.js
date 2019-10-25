@@ -77,7 +77,9 @@ export default function Dashboard() {
             </div>
           {/* <History>
             <HistoryItem> */}
+            <div>
             <Comments/>
+            </div>
             {/* </HistoryItem>
           </History> */}
 
