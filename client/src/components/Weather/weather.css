@@ -3,6 +3,8 @@
     color: white;
     position: absolute;
     z-index: 6;
+    margin-left: -20%;
+    margin-top: 10%;
 }
 
 #rowW {
